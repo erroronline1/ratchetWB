@@ -8,19 +8,17 @@ class ratchetWB(FreeCADGui.Workbench):
 	Icon = os.path.join(ICONPATH, "icon.svg")
 	
 	commands = [
-		"ExternalDirected", "InternalDirected", "ExternalDouble", "InternalDouble"]
-	for type in tools.materials:
-		commands.append(f"create{type}")
+		"Create_ExternalDirected", "Create_InternalDirected", "Create_ExternalDouble", "Create_InternalDouble"]
 
 	def Initialize(self):
 		"""This function is executed when FreeCAD starts"""
 		from . import commands #, import here all the needed files that create your FreeCAD commands
 		self.appendToolbar("Ratchet", self.commands)
 		self.appendMenu("Ratchet", self.commands)
-		FreeCADGui.addCommand(f"Create_ExternalDirected", commands.ExternalDirected())
-		FreeCADGui.addCommand(f"Create_InternalDirected", commands.InternalDirected())
-		FreeCADGui.addCommand(f"Create_ExternalDouble", commands.ExternalDouble())
-		FreeCADGui.addCommand(f"Create_InternalDouble", commands.InternalDouble())
+		FreeCADGui.addCommand(f"Create_ExternalDirected", commands.Create_ExternalDirected())
+		FreeCADGui.addCommand(f"Create_InternalDirected", commands.Create_InternalDirected())
+		FreeCADGui.addCommand(f"Create_ExternalDouble", commands.Create_ExternalDouble())
+		FreeCADGui.addCommand(f"Create_InternalDouble", commands.Create_InternalDouble())
 
 	def Activated(self):
 		pass

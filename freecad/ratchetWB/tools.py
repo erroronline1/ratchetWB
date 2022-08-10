@@ -23,14 +23,14 @@ class language:
 		return self.language[chunk]
 LANG=language()
 
-def ExternalDirected():
+def ExternalDirected(*void):
 	report ("external directed")
 
-def internalDirected():
+def InternalDirected(*void):
 	report ("internal directed")
 
-def ExternalDouble():
+def ExternalDouble(*void):
 	report ("external double")
 
-def InternalDouble():
+def InternalDouble(*void):
 	report ("internal double")

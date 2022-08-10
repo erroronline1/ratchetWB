@@ -20,7 +20,7 @@
       <version>0.1.0</version>
       <freecadmin>0.20.0</freecadmin>
       <!--depend>numpy</depend-->
-      <tag>estimate</tag>
+      <tag>ratchet</tag>
       <tag>volume</tag>
       <tag>weight</tag>
     </workbench>

@@ -25,7 +25,7 @@ This workbench can be installed manually by adding the whole folder into the per
 - for Windows as portable app `wherever_stored\FreeCADPortable\Data\FreeCADAppData\Mod`
 - for macOS `~/Library/Preferences/FreeCAD/Mod/`
 
-Occasionally rename from estimateWB-master to estimateWB if downloaded as zip from github
+Occasionally rename from ratchetWB-master to ratchetWB if downloaded as zip from github
 
 </details>
 

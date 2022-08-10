@@ -24,38 +24,30 @@ class BaseCommand():
 
 ################################################################################
 
-class ExternalDirected(BaseCommand):
+class Create_ExternalDirected(BaseCommand):
 	name = tools.LANG.chunk("ExternalDirectedName")[0]
 	function = tools.ExternalDirected
 	pixmap = os.path.join(ICONPATH, "icon.svg")
 	menuText = tools.LANG.chunk("ExternalDirectedMenuText")[0]
 	toolTip = tools.LANG.chunk("ExternalDirectedToolTip")[0]
-	def IsActive(self):
-		pass
 
-class InternalDirected(BaseCommand):
+class Create_InternalDirected(BaseCommand):
 	name = tools.LANG.chunk("InternalDirectedName")[0]
 	function = tools.InternalDirected
 	pixmap = os.path.join(ICONPATH, "InternalDirected.svg")
 	menuText = tools.LANG.chunk("InternalDirectedMenuText")[0]
 	toolTip = tools.LANG.chunk("InternalDirectedToolTip")[0]
-	def IsActive(self):
-		pass
 
-class ExternalDouble(BaseCommand):
+class Create_ExternalDouble(BaseCommand):
 	name = tools.LANG.chunk("ExternalDoubleName")[0]
 	function = tools.ExternalDouble
 	pixmap = os.path.join(ICONPATH, "ExternalDouble.svg")
 	menuText = tools.LANG.chunk("ExternalDoubleMenuText")[0]
 	toolTip = tools.LANG.chunk("ExternalDoubleToolTip")[0]
-	def IsActive(self):
-		pass
 
-class InternalDouble(BaseCommand):
+class Create_InternalDouble(BaseCommand):
 	name = tools.LANG.chunk("InternalDoubleName")[0]
 	function = tools.InternalDouble
 	pixmap = os.path.join(ICONPATH, "InternalDouble.svg")
 	menuText = tools.LANG.chunk("InternalDoubleMenuText")[0]
 	toolTip = tools.LANG.chunk("InternalDoubleToolTip")[0]
-	def IsActive(self):
-		pass
