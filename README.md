@@ -3,13 +3,19 @@
 A FreeCAD workbench to create ratchets
 
 ### Background
-Like workbenches that create gears this workbench is supposed to create ratchets. You can choose between ratchets that allow only for one direction or ratches that allow both directions. It is expected to make these type of functional units easier to create than sketching them manually.
+Considering manually constructing circular ratchets an annoing task you can now choose between the automated creation of ratchets that allow only for one direction or ratches that allow both directions. For inset mechanisms you can just subtract the generated shape.
+
+Heavily <s>stolen</s> inspired from [looooos freecad.gears](https://github.com/looooo/freecad.gears) this workbench is supposed to create ratchets.
 
 The workbench has been developed and tested with FreeCAD v0.20
 
+![screenshot](https://raw.githubusercontent.com/erroronline1/ratchetWB/master/freecad/ratchetWB/resources/screenshot.png)
+
 ### Usage
 
-to do
+Add one of the desired geometries either as a part or as part of an active body. Change values regarding e.g. size and number of teeth within the models property settings.
+
+There is not a complete failsafe mechanism to avoid all possible meaningless values! 
 
 ### Installation 
 
