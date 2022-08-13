@@ -1,4 +1,5 @@
 import math as Math
+from . import tools
 
 class DirectedTeeth():
     def __init__(self, properties):
@@ -10,6 +11,9 @@ class DirectedTeeth():
         self._calc_directed()
 
     def _calc_directed(self):
+        if self.Teeth < 2:
+            tools.report(f"{self.Teeth} {tools.LANG.chunk('PropertyTeethError')[0]}")
+            return
         tooth = Math.pi*2 / self.Teeth
         floor=self.Radius - self.Toothheight
         if self.Inset:

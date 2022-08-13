@@ -12,7 +12,8 @@
     "PropertyTitle": ["Parameter"],
     "PropertyRadius": ["Außenradius"],
     "PropertyTeeth": ["Anzahl der Zähne"],
-    "PropertyToothheight": ["heightHöhe der Zähne"],
+    "PropertyTeethError": [" ist keine gültige Anzahl. Bitte nutze 2+ Zähne."],
+    "PropertyToothheight": ["Höhe der Zähne"],
     "PropertyInset": ["Inset"],
     "PropertyPad": ["Dicke"]
 }

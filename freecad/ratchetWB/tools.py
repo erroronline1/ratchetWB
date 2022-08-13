@@ -114,7 +114,9 @@ class Directed(BaseRatchet):
                 nextv = v+2
         wire=Part.Wire(draft)
         face=Part.Face(wire)
-        return face.extrude(FreeCAD.Vector(0, 0, fp.ratchet.Pad))
+        if fp.ratchet.Pad > 0:
+            return face.extrude(FreeCAD.Vector(0, 0, fp.ratchet.Pad))
+        return face
 
     def __getstate__(self):
         return None
@@ -166,7 +168,9 @@ class Double(BaseRatchet):
                                                     FreeCAD.Vector(vector[0]['x'], vector[0]['y'], vector[0]['z'])).toShape())
         wire=Part.Wire(draft)
         face=Part.Face(wire)
-        return face.extrude(FreeCAD.Vector(0, 0, fp.ratchet.Pad))
+        if fp.ratchet.Pad > 0:
+            return face.extrude(FreeCAD.Vector(0, 0, fp.ratchet.Pad))
+        return face
 
     def __getstate__(self):
         return None

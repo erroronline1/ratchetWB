@@ -12,6 +12,7 @@
     "PropertyTitle": ["Parameter"],
     "PropertyRadius": ["Outer radius"],
     "PropertyTeeth": ["Number of Teeth"],
+    "PropertyTeethError": [" is not a valid number of teeth. Please use 2+ teeth."],
     "PropertyToothheight": ["Tooth height"],
     "PropertyInset": ["Inset"],
     "PropertyPad": ["Pad"]
