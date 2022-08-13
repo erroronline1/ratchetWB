@@ -1,12 +1,18 @@
 {
-    "wbToolTip":["Create a ratchet"],
+    "wbToolTip": ["Create a ratchet"],
 
+    "DirectedName": ["directed ratchet"],
+    "DirectedMenuText": ["directed"],
+    "DirectedToolTip": ["directed ratchet"],
 
-    "DirectedName":["directed ratchet"],
-    "DirectedMenuText":["directed"],
-    "DirectedToolTip":["directed ratchet"],
-    
-    "DoubleName":["double sided ratchet"],
-    "DoubleMenuText":["double sided"],
-    "DoubleToolTip":["double sided ratchet"]
+    "DoubleName": ["double sided ratchet"],
+    "DoubleMenuText": ["double sided"],
+    "DoubleToolTip": ["double sided ratchet"],
+
+    "PropertyTitle": ["Parameter"],
+    "PropertyRadius": ["Outer radius"],
+    "PropertyTeeth": ["Number of Teeth"],
+    "PropertyToothheight": ["Tooth height"],
+    "PropertyInset": ["Inset"],
+    "PropertyPad": ["Pad"]
 }

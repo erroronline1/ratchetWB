@@ -70,12 +70,12 @@ class Directed(BaseRatchet):
         }
         self.ratchet = teeth.DirectedTeeth(properties)
 
-        obj.addProperty("App::PropertyLength", "radius", "Parameter", "outer radius")
-        obj.addProperty("App::PropertyInteger", "teeth", "Parameter", "number of teeth")
-        obj.addProperty("App::PropertyLength", "toothheight", "Parameter", "height of teeth")
-        obj.addProperty("App::PropertyBool", "inset", "Parameter", "inset")
-        obj.addProperty("App::PropertyLength", "pad", "Parameter", "pad height of ratchet")
-        obj.addProperty("App::PropertyPythonObject", "ratchet", "Parameter", "ratchet object")
+        obj.addProperty("App::PropertyLength", "radius", LANG.chunk("PropertyTitle")[0], LANG.chunk("PropertyRadius")[0])
+        obj.addProperty("App::PropertyInteger", "teeth", LANG.chunk("PropertyTitle")[0], LANG.chunk("PropertyTeeth")[0])
+        obj.addProperty("App::PropertyLength", "toothheight", LANG.chunk("PropertyTitle")[0], LANG.chunk("PropertyToothheight")[0])
+        obj.addProperty("App::PropertyBool", "inset", LANG.chunk("PropertyTitle")[0], LANG.chunk("PropertyInset")[0])
+        obj.addProperty("App::PropertyLength", "pad", LANG.chunk("PropertyTitle")[0], LANG.chunk("PropertyPad")[0])
+        obj.addProperty("App::PropertyPythonObject", "ratchet", LANG.chunk("PropertyTitle")[0], "ratchet object")
 
         obj.radius = f"{properties['radius']}. mm"
         obj.teeth = properties['teeth']
@@ -134,10 +134,10 @@ class Double(BaseRatchet):
         }
         self.ratchet = teeth.DoubleTeeth(properties)
 
-        obj.addProperty("App::PropertyLength", "radius", "Parameter", "outer radius")
-        obj.addProperty("App::PropertyInteger", "teeth", "Parameter", "number of teeth")
-        obj.addProperty("App::PropertyLength", "toothheight", "Parameter", "height of teeth")
-        obj.addProperty("App::PropertyLength", "pad", "Parameter", "pad height of ratchet")
+        obj.addProperty("App::PropertyLength", "radius", LANG.chunk("PropertyTitle")[0], LANG.chunk("PropertyRadius")[0])
+        obj.addProperty("App::PropertyInteger", "teeth", LANG.chunk("PropertyTitle")[0], LANG.chunk("PropertyTeeth")[0])
+        obj.addProperty("App::PropertyLength", "toothheight", LANG.chunk("PropertyTitle")[0], LANG.chunk("PropertyToothheight")[0])
+        obj.addProperty("App::PropertyLength", "pad", LANG.chunk("PropertyTitle")[0], LANG.chunk("PropertyPad")[0])
         obj.addProperty("App::PropertyPythonObject", "ratchet", "Parameter", "ratchet object")
 
         obj.radius = f"{properties['radius']}. mm"

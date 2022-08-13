@@ -1,12 +1,18 @@
 {
-    "wbToolTip":["Erstelle ein Sperrad"],
+    "wbToolTip": ["Erstelle ein Sperrad"],
 
+    "DirectedName": ["gelenktes Sperrad"],
+    "DirectedMenuText": ["gelenkt"],
+    "DirectedToolTip": ["gelenktes Sperrad"],
 
-    "DirectedName":["gelenktes Sperrad"],
-    "DirectedMenuText":["gelenkt"],
-    "DirectedToolTip":["gelenktes Sperrad"],
+    "DoubleName": ["beidseitiges Sperrad"],
+    "DoubleMenuText": ["beidseitig"],
+    "DoubleToolTip": ["beidseitiges Sperrad"],
 
-    "DoubleName":["beidseitiges Sperrad"],
-    "DoubleMenuText":["beidseitig"],
-    "DoubleToolTip":["beidseitiges Sperrad"]
+    "PropertyTitle": ["Parameter"],
+    "PropertyRadius": ["Außenradius"],
+    "PropertyTeeth": ["Anzahl der Zähne"],
+    "PropertyToothheight": ["heightHöhe der Zähne"],
+    "PropertyInset": ["Inset"],
+    "PropertyPad": ["Dicke"]
 }
