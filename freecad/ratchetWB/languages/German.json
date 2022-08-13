@@ -2,19 +2,11 @@
     "wbToolTip":["Erstelle ein Sperrad"],
 
 
-    "ExternalDirectedName":["Externes gelenktes Sperrad"],
-    "ExternalDirectedMenuText":["extern gelenkt"],
-    "ExternalDirectedToolTip":["Externes gelenktes Sperrad"],
-    
-    "InternalDirectedName":["Internes gelenktes Sperrad"],
-    "InternalDirectedMenuText":["intern gelenkt"],
-    "InternalDirectedToolTip":["internes gelenktes Sperrad"],
-    
-    "ExternalDoubleName":["Externes beidseitiges Sperrad"],
-    "ExternalDoubleMenuText":["extern beidseitig"],
-    "ExternalDoubleToolTip":["Externes beidseitiges Sperrad"],
-    
-    "InternalDoubleName":["Internes beidseitiges Sperrad"],
-    "InternalDoubleMenuText":["intern beidseitig"],
-    "InternalDoubleToolTip":["Internes beidseitiges Sperrad"]
+    "DirectedName":["gelenktes Sperrad"],
+    "DirectedMenuText":["gelenkt"],
+    "DirectedToolTip":["gelenktes Sperrad"],
+
+    "DoubleName":["beidseitiges Sperrad"],
+    "DoubleMenuText":["beidseitig"],
+    "DoubleToolTip":["beidseitiges Sperrad"]
 }

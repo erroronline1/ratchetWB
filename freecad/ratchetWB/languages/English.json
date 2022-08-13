@@ -2,20 +2,11 @@
     "wbToolTip":["Create a ratchet"],
 
 
-    "ExternalDirectedName":["External directed ratchet"],
-    "ExternalDirectedMenuText":["External directed"],
-    "ExternalDirectedToolTip":["External directed ratchet"],
+    "DirectedName":["directed ratchet"],
+    "DirectedMenuText":["directed"],
+    "DirectedToolTip":["directed ratchet"],
     
-    "InternalDirectedName":["Internal directed ratchet"],
-    "InternalDirectedMenuText":["Internal directed"],
-    "InternalDirectedToolTip":["Internal directed ratchet"],
-    
-    "ExternalDoubleName":["External double sided ratchet"],
-    "ExternalDoubleMenuText":["External double sided"],
-    "ExternalDoubleToolTip":["External double sided ratchet"],
-    
-    "InternalDoubleName":["Internal double sided ratchet"],
-    "InternalDoubleMenuText":["Internal double sided"],
-    "InternalDoubleToolTip":["Internal double sided ratchet"]
-    
+    "DoubleName":["double sided ratchet"],
+    "DoubleMenuText":["double sided"],
+    "DoubleToolTip":["double sided ratchet"]
 }
