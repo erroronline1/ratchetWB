@@ -6,7 +6,7 @@ class DirectedTeeth():
         self.Radius = properties['Radius']
         self.Teeth = properties['Teeth']
         self.Toothheight = properties['Toothheight']
-        self.Inset = properties['Inset']
+        self.Curve = properties['Curve']
         self.Pad = properties['Pad']
         self._calc_directed()
 
@@ -16,10 +16,7 @@ class DirectedTeeth():
             return
         tooth = Math.pi*2 / self.Teeth
         floor=self.Radius - self.Toothheight
-        if self.Inset:
-            middle=floor + self.Toothheight/4
-        else:
-            middle=floor + self.Toothheight/2
+        middle=floor + self.Toothheight* self.Curve
         segments=[];
         segments.append({'type': 'p', 'x': Math.sin(0) * floor, 'y': Math.cos(0) * floor, 'z': 0}) # start point line
         for i in range(self.Teeth):

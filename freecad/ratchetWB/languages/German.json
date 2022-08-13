@@ -14,6 +14,6 @@
     "PropertyTeeth": ["Anzahl der Zähne"],
     "PropertyTeethError": [" ist keine gültige Anzahl. Bitte nutze 2+ Zähne."],
     "PropertyToothheight": ["Höhe der Zähne"],
-    "PropertyInset": ["Inset"],
+    "PropertyCurve": ["Krümmung"],
     "PropertyPad": ["Dicke"]
 }

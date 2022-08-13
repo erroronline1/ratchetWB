@@ -65,7 +65,7 @@ class Directed(BaseRatchet):
             'Radius': 25,
             'Teeth': 15,
             'Toothheight': 5,
-            'Inset': False,
+            'Curve': .5,
             'Pad': 5
         }
         self.ratchet = teeth.DirectedTeeth(properties)
@@ -73,14 +73,14 @@ class Directed(BaseRatchet):
         obj.addProperty("App::PropertyLength", "Radius", LANG.chunk("PropertyTitle")[0], LANG.chunk("PropertyRadius")[0])
         obj.addProperty("App::PropertyInteger", "Teeth", LANG.chunk("PropertyTitle")[0], LANG.chunk("PropertyTeeth")[0])
         obj.addProperty("App::PropertyLength", "Toothheight", LANG.chunk("PropertyTitle")[0], LANG.chunk("PropertyToothheight")[0])
-        obj.addProperty("App::PropertyBool", "Inset", LANG.chunk("PropertyTitle")[0], LANG.chunk("PropertyInset")[0])
+        obj.addProperty("App::PropertyFloat", "Curve", LANG.chunk("PropertyTitle")[0], LANG.chunk("PropertyCurve")[0])
         obj.addProperty("App::PropertyLength", "Pad", LANG.chunk("PropertyTitle")[0], LANG.chunk("PropertyPad")[0])
         obj.addProperty("App::PropertyPythonObject", "ratchet", LANG.chunk("PropertyTitle")[0], "ratchet object")
 
         obj.Radius = f"{properties['Radius']}. mm"
         obj.Teeth = properties['Teeth']
         obj.Toothheight = f"{properties['Toothheight']}. mm"
-        obj.Inset = properties['Inset']
+        obj.Curve = properties['Curve']
         obj.Pad = f"{properties['Pad']}. mm"
         obj.ratchet = self.ratchet
         obj.Proxy = self
@@ -89,7 +89,7 @@ class Directed(BaseRatchet):
         fp.ratchet.Radius = fp.Radius
         fp.ratchet.Teeth = fp.Teeth
         fp.ratchet.Toothheight = fp.Toothheight
-        fp.ratchet.Inset = fp.Inset
+        fp.ratchet.Curve = fp.Curve
         fp.ratchet.Pad = fp.Pad
         fp.ratchet._update()
                 
