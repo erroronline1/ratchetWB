@@ -5,9 +5,9 @@ A FreeCAD workbench to create ratchets
 ### Background
 Considering manually constructing circular ratchets an annoing task you can now choose between the automated creation of ratchets that allow only for one direction or ratches that allow both directions. For inset mechanisms you can just subtract the generated shape.
 
-Heavily <s>stolen</s> inspired from [looooos freecad.gears](https://github.com/looooo/freecad.gears) this workbench is supposed to create ratchets.
+Heavily <s>stolen</s> inspired from [looooos freecad.gears](https://github.com/looooo/freecad.gears).
 
-The workbench has been developed and tested with FreeCAD v0.20
+The workbench has been developed and tested with FreeCAD v0.20.
 
 ![screenshot](https://raw.githubusercontent.com/erroronline1/ratchetWB/master/freecad/ratchetWB/resources/screenshot.png)
 
@@ -41,7 +41,7 @@ Different languages according to user settings are technically supported - but a
 
 ### Bug/Feedback
 
-Please report bugs to the [issue queue](https://github.com/erroronline1/ratchetWB/issues) to discuss said issue or feedback in general.   
+Please report bugs to the [issue queue](https://github.com/erroronline1/ratchetWB/issues) and ping the [dedicated ratchetWB FreeCAD forum thread](https://forum.freecadweb.org/viewtopic.php?f=22&t=71072) to discuss said issue or feedback in general.   
 
 ## License
 
