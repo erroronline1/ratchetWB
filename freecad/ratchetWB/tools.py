@@ -1,8 +1,7 @@
 import os
 from datetime import datetime
 import json
-import FreeCAD, FreeCADGui, Part
-from PySide import QtGui
+import FreeCAD, Part
 from . import LANGUAGEPATH
 from . import teeth
 
@@ -21,7 +20,7 @@ class language:
                 self.language = json.loads(jsonfile.read().replace('\n', ''))
     def chunk(self, chunk):
         return self.language[chunk]
-LANG=language()
+LANG = language()
 
 class BaseRatchet(object):
     # taken from https://github.com/looooo/freecad.gears
