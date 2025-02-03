@@ -7,10 +7,19 @@ Considering manually constructing circular ratchets an annoing task you can now 
 
 Heavily <s>stolen</s> inspired from [looooos freecad.gears](https://github.com/looooo/freecad.gears).
 
-The workbench has been developed and tested with FreeCAD v0.20.
-
 ![screenshot](https://raw.githubusercontent.com/erroronline1/ratchetWB/master/freecad/ratchetWB/resources/screenshot.png)
 
+### Version compatibility
+
+<details>
+<summary>Confirmed latest stable FreeCad version 1.0 - Expand for more</summary>
+
+* 1.1rc build 40041 x86_64
+* 1.0
+* 0.21.2
+* 0.20
+
+</details>
 ### Usage
 
 Add one of the desired geometries either as a part or as part of an active body. Change values regarding e.g. size and number of teeth within the models property settings. Possibly edit the Curve-property for inset directed ratchets.
