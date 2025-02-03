@@ -20,6 +20,7 @@ Heavily <s>stolen</s> inspired from [looooos freecad.gears](https://github.com/l
 * 0.20
 
 </details>
+
 ### Usage
 
 Add one of the desired geometries either as a part or as part of an active body. Change values regarding e.g. size and number of teeth within the models property settings. Possibly edit the Curve-property for inset directed ratchets.
