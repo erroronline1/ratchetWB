@@ -1,10 +1,12 @@
-from .resources import icon, LANG
+from .resources import icon
 
-import FreeCADGui
+import FreeCAD, FreeCADGui
+
+QT_TRANSLATE_NOOP = FreeCAD.Qt.QT_TRANSLATE_NOOP
 
 class ratchetWB(FreeCADGui.Workbench):
 	MenuText = "Ratchet"
-	ToolTip = LANG.chunk("wbToolTip")[0]
+	ToolTip = QT_TRANSLATE_NOOP("App::Property", "Create a ratchet")
 	Icon = icon("icon")
 
 	commands = [

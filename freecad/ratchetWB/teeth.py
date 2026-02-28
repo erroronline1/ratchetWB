@@ -1,6 +1,10 @@
 import math as Math
 from . import tools
 
+import FreeCAD
+
+QT_TRANSLATE_NOOP = FreeCAD.Qt.QT_TRANSLATE_NOOP
+
 class DirectedTeeth():
     def __init__(self, properties):
         self.Radius = properties['Radius']
@@ -12,7 +16,7 @@ class DirectedTeeth():
 
     def _calc_directed(self):
         if self.Teeth < 2:
-            tools.report(f"{self.Teeth} {tools.LANG.chunk('PropertyTeethError')[0]}")
+            tools.report(f"{self.Teeth} {QT_TRANSLATE_NOOP("App::Property", " is not a valid number of teeth. Please use 2+ teeth.")}")
             return
         tooth = Math.pi*2 / self.Teeth
         floor=self.Radius - self.Toothheight

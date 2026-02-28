@@ -1,7 +1,9 @@
-from .resources import icon, LANG
+from .resources import icon
 from . import tools
 
 import FreeCAD, FreeCADGui
+
+QT_TRANSLATE_NOOP = FreeCAD.Qt.QT_TRANSLATE_NOOP
 
 class BaseCommand():
     # taken from https://github.com/looooo/freecad.gears
@@ -73,15 +75,15 @@ class ViewRatchet(object):
 ################################################################################
 
 class Create_Directed(BaseCommand):
-    name = tools.LANG.chunk("DirectedName")[0]
+    name = QT_TRANSLATE_NOOP("App::Property", "directed ratchet")
     function = tools.Directed
     pixmap = icon("icon")
-    menuText = tools.LANG.chunk("DirectedMenuText")[0]
-    toolTip = tools.LANG.chunk("DirectedToolTip")[0]
+    menuText = QT_TRANSLATE_NOOP("App::Property", "directed")
+    toolTip = QT_TRANSLATE_NOOP("App::Property", "directed ratchet")
 
 class Create_Double(BaseCommand):
-    name = tools.LANG.chunk("DoubleName")[0]
+    name = QT_TRANSLATE_NOOP("App::Property", "double sided ratchet")
     function = tools.Double
     pixmap = icon("Double")
-    menuText = tools.LANG.chunk("DoubleMenuText")[0]
-    toolTip = tools.LANG.chunk("DoubleToolTip")[0]
+    menuText = QT_TRANSLATE_NOOP("App::Property", "double sided")
+    toolTip = QT_TRANSLATE_NOOP("App::Property", "double sided ratchet")
