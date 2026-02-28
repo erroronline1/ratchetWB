@@ -1,7 +1,7 @@
-import FreeCAD, FreeCADGui
-import os
-from . import ICONPATH
+from .resources import icon, LANG
 from . import tools
+
+import FreeCAD, FreeCADGui
 
 class BaseCommand():
     # taken from https://github.com/looooo/freecad.gears
@@ -75,13 +75,13 @@ class ViewRatchet(object):
 class Create_Directed(BaseCommand):
     name = tools.LANG.chunk("DirectedName")[0]
     function = tools.Directed
-    pixmap = os.path.join(ICONPATH, "icon.svg")
+    pixmap = icon("icon")
     menuText = tools.LANG.chunk("DirectedMenuText")[0]
     toolTip = tools.LANG.chunk("DirectedToolTip")[0]
 
 class Create_Double(BaseCommand):
     name = tools.LANG.chunk("DoubleName")[0]
     function = tools.Double
-    pixmap = os.path.join(ICONPATH, "Double.svg")
+    pixmap = icon("Double")
     menuText = tools.LANG.chunk("DoubleMenuText")[0]
     toolTip = tools.LANG.chunk("DoubleToolTip")[0]

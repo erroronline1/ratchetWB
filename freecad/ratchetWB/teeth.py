@@ -17,7 +17,7 @@ class DirectedTeeth():
         tooth = Math.pi*2 / self.Teeth
         floor=self.Radius - self.Toothheight
         middle=floor + self.Toothheight* self.Curve
-        segments=[];
+        segments=[]
         segments.append({'type': 'p', 'x': Math.sin(0) * floor, 'y': Math.cos(0) * floor, 'z': 0}) # start point line
         for i in range(self.Teeth):
             segments.append({'type': 'p', 'x': Math.sin(tooth * i) * self.Radius, 'y': Math.cos(tooth * i) * self.Radius, 'z': 0}) # end point line, start point arc
@@ -39,7 +39,7 @@ class DoubleTeeth():
     def _calc_directed(self):
         tooth = Math.pi*2 / self.Teeth
         floor=self.Radius - self.Toothheight
-        segments=[];
+        segments=[]
         for i in range(self.Teeth):
             segments.append({'type': 'p', 'x': Math.sin(tooth * i) * floor, 'y': Math.cos(tooth * i) * floor, 'z': 0}) # end point
             segments.append({'type': 'p', 'x': Math.sin(tooth * (i +.5)) * self.Radius, 'y': Math.cos(tooth * (i +.5)) * self.Radius, 'z': 0}) # tip

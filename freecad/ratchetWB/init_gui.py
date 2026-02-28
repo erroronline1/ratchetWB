@@ -1,12 +1,12 @@
-import os
+from .resources import icon, LANG
+
 import FreeCADGui
-from . import ICONPATH, tools
 
 class ratchetWB(FreeCADGui.Workbench):
 	MenuText = "Ratchet"
-	ToolTip = tools.LANG.chunk("wbToolTip")[0]
-	Icon = os.path.join(ICONPATH, "icon.svg")
-	
+	ToolTip = LANG.chunk("wbToolTip")[0]
+	Icon = icon("icon")
+
 	commands = [
 		"Create_Directed", "Create_Double"]
 

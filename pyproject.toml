@@ -1,0 +1,24 @@
+[project]
+name = "ratchetWB"
+version = "0.1.0"
+description = "A FreeCAD workbench to quickly create ratchets"
+authors = [
+  {name = "error on line 1", email = "dev@erroronline.one"},
+]
+maintainers = [
+  {name = "error on line 1", email = "dev@erroronline.one"}
+]
+license = "LGPL-3.0-or-later"
+license-files = ["LICEN[CS]E.*"]
+readme = "README.md"
+keywords = ["ratchets", "addon", "freecad", "workbench"]
+
+dependencies = [
+# "numpy"
+# see https://packaging.python.org/en/latest/guides/writing-pyproject-toml/
+# match with package.xml
+]
+requires-python = ">=3.8"
+classifiers = [
+  "Programming Language :: Python"
+]

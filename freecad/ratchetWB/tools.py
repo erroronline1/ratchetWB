@@ -1,26 +1,12 @@
-import os
 from datetime import datetime
-import json
-import FreeCAD, Part
-from . import LANGUAGEPATH
+from .resources import icon, LANG
 from . import teeth
+
+import FreeCAD, Part
 
 def report(msg):
     now = datetime.now().strftime("%H:%M:%S")
     FreeCAD.Console.PrintMessage(f"\n{now} {msg}")
-
-class language:
-    def __init__(self):
-        try:
-            '''load settings'''
-            with open(f'{os.path.join(LANGUAGEPATH, FreeCAD.ParamGet("User parameter:BaseApp/Preferences/General").GetString("Language"))}.json', 'r') as jsonfile:
-                self.language = json.loads(jsonfile.read().replace('\n', ''))
-        except:
-            with open(f'{os.path.join(LANGUAGEPATH, "English")}.json', 'r') as jsonfile:
-                self.language = json.loads(jsonfile.read().replace('\n', ''))
-    def chunk(self, chunk):
-        return self.language[chunk]
-LANG = language()
 
 class BaseRatchet(object):
     # taken from https://github.com/looooo/freecad.gears

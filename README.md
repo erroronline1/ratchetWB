@@ -36,7 +36,7 @@ There is not a complete failsafe mechanism to avoid all possible meaningless val
 
 This workbench can be installed manually by adding the whole folder into the personal FreeCAD folder
 
-- for Linux `/home/user/.local/share/FreeCAD/Mod/`
+- for Linux `/home/user/.local/share/FreeCAD/Mod/` or `~/.var/app/org.freecad.FreeCAD/data/FreeCAD/Mod`
 - for Windows `%APPDATA%\FreeCAD\Mod\` or `C:\Users\username\Appdata\Roaming\FreeCAD\Mod\`
 - for Windows as portable app `wherever_stored\FreeCADPortable\Data\FreeCADAppData\Mod`
 - for macOS `~/Library/Preferences/FreeCAD/Mod/`
