@@ -4,80 +4,75 @@
 <context>
     <name>App::Property</name>
     <message>
-        <location filename="../init_gui.py" line="10"/>
+        <location filename="../init_gui.py" line="14"/>
         <source>Create a ratchet</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../commands.py" line="79"/>
-        <location filename="../commands.py" line="84"/>
+        <location filename="../commands.py" line="98"/>
+        <location filename="../commands.py" line="103"/>
         <source>directed ratchet</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../commands.py" line="82"/>
+        <location filename="../commands.py" line="101"/>
         <source>directed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../commands.py" line="86"/>
-        <location filename="../commands.py" line="90"/>
+        <location filename="../commands.py" line="105"/>
+        <location filename="../commands.py" line="109"/>
         <source>double sided ratchet</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../commands.py" line="89"/>
+        <location filename="../commands.py" line="108"/>
         <source>double sided</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../tools.py" line="60"/>
-        <location filename="../tools.py" line="61"/>
         <location filename="../tools.py" line="62"/>
         <location filename="../tools.py" line="63"/>
         <location filename="../tools.py" line="64"/>
         <location filename="../tools.py" line="65"/>
-        <location filename="../tools.py" line="126"/>
-        <location filename="../tools.py" line="127"/>
-        <location filename="../tools.py" line="128"/>
+        <location filename="../tools.py" line="66"/>
+        <location filename="../tools.py" line="67"/>
         <location filename="../tools.py" line="129"/>
         <location filename="../tools.py" line="130"/>
+        <location filename="../tools.py" line="131"/>
+        <location filename="../tools.py" line="132"/>
+        <location filename="../tools.py" line="133"/>
         <source>Parameter</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../tools.py" line="60"/>
-        <location filename="../tools.py" line="126"/>
+        <location filename="../tools.py" line="62"/>
+        <location filename="../tools.py" line="129"/>
         <source>Outer radius</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../tools.py" line="61"/>
-        <location filename="../tools.py" line="127"/>
+        <location filename="../tools.py" line="63"/>
+        <location filename="../tools.py" line="130"/>
         <source>Number of Teeth</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../tools.py" line="62"/>
-        <location filename="../tools.py" line="128"/>
+        <location filename="../tools.py" line="64"/>
+        <location filename="../tools.py" line="131"/>
         <source>Tooth height</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../tools.py" line="63"/>
+        <location filename="../tools.py" line="65"/>
         <source>Curve</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../tools.py" line="64"/>
-        <location filename="../tools.py" line="129"/>
+        <location filename="../tools.py" line="66"/>
+        <location filename="../tools.py" line="132"/>
         <source>Pad</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <location filename="../teeth.py" line="19"/>
-        <source> is not a valid number of teeth. Please use 2+ teeth.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    </context>
+</context>
 </TS>
