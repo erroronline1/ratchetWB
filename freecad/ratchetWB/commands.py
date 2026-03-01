@@ -6,7 +6,25 @@ import FreeCAD, FreeCADGui
 QT_TRANSLATE_NOOP = FreeCAD.Qt.QT_TRANSLATE_NOOP
 
 class BaseCommand():
-    # taken from https://github.com/looooo/freecad.gears
+    """
+        taken from https://github.com/looooo/freecad.gears
+        TMYK: here the commands are defined by child classes, each their own
+        * name
+        * function
+        * pixmap (icon)
+        * menu text
+        * tooltip
+
+        available commands (classes extending the base command) are initialized with their
+        respective properties before FreeCAD calls their methods on interaction.
+        basically there is no need to change anything in this class as far as i know
+    """
+    name = ''
+    function = lambda obj: None
+    pixmap = ''
+    menuText = ''
+    toolTip = ''
+
     def __init__(self):
         pass
 
@@ -53,12 +71,13 @@ class BaseCommand():
 
 ################################################################################
 
-class ViewRatchet(object):
-    # taken from https://github.com/looooo/freecad.gears
-    def __init__(self, obj, icon):
-        ''' Set this object to the proxy object of the actual view provider '''
+class ViewRatchet():
+    """ taken from https://github.com/looooo/freecad.gears """
+    icon = ''
+    def __init__(self, obj, fnicon):
+        """ Set this object to the proxy object of the actual view provider """
         obj.Proxy = self
-        self.icon = icon
+        self.icon = fnicon
 
     def attach(self, vobj):
         self.vobj = vobj

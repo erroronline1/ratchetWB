@@ -1,24 +1,31 @@
 from .resources import icon
+from . import commands
 
 import FreeCAD, FreeCADGui
 
 QT_TRANSLATE_NOOP = FreeCAD.Qt.QT_TRANSLATE_NOOP
 
 class ratchetWB(FreeCADGui.Workbench):
+	"""
+		this is the main workbench class that embeds the menu and toolbar buttons with assigned functions
+	"""
 	MenuText = "Ratchet"
 	ToolTip = QT_TRANSLATE_NOOP("App::Property", "Create a ratchet")
 	Icon = icon("icon")
 
-	commands = [
-		"Create_Directed", "Create_Double"]
-
 	def Initialize(self):
-		"""This function is executed when FreeCAD starts"""
-		from . import commands #, import here all the needed files that create your FreeCAD commands
-		self.appendToolbar("Ratchet", self.commands)
-		self.appendMenu("Ratchet", self.commands)
-		FreeCADGui.addCommand(f"Create_Directed", commands.Create_Directed())
-		FreeCADGui.addCommand(f"Create_Double", commands.Create_Double())
+		"""
+			This function is executed when FreeCAD starts
+		"""
+
+		fn = {
+			"Create_Directed": commands.Create_Directed(),
+			"Create_Double": commands.Create_Double()
+		}
+		self.appendToolbar("Ratchet", list(fn.keys()))
+		self.appendMenu("Ratchet", list(fn.keys()))
+		for commandname, commandfunction in fn.items():
+			FreeCADGui.addCommand(commandname, commandfunction)
 
 	def Activated(self):
 		pass

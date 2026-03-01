@@ -6,6 +6,7 @@ import FreeCAD
 QT_TRANSLATE_NOOP = FreeCAD.Qt.QT_TRANSLATE_NOOP
 
 class DirectedTeeth():
+    """ vector calculation for a directed ratchet """
     def __init__(self, properties):
         self.Radius = properties['Radius']
         self.Teeth = properties['Teeth']
@@ -33,6 +34,7 @@ class DirectedTeeth():
         self._calc_directed()
 
 class DoubleTeeth():
+    """ vector calculation for a double sided ratchet """
     def __init__(self, properties):
         self.Radius = properties['Radius']
         self.Teeth = properties['Teeth']

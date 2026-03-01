@@ -7,11 +7,12 @@ import FreeCAD, Part
 QT_TRANSLATE_NOOP = FreeCAD.Qt.QT_TRANSLATE_NOOP
 
 def report(msg):
+    """ (error)-reporting to console """
     now = datetime.now().strftime("%H:%M:%S")
     FreeCAD.Console.PrintMessage(f"\n{now} {msg}")
 
-class BaseRatchet(object):
-    # taken from https://github.com/looooo/freecad.gears
+class BaseRatchet():
+    """ taken from https://github.com/looooo/freecad.gears """
     def __init__(self, obj):
         pass
 
@@ -32,7 +33,7 @@ class BaseRatchet(object):
             self.make_attachable(fp)
         fp.positionBySupport()
         ratchet_shape = self._generate_ratchet(fp)
-        if hasattr(fp, "BaseFeature") and fp.BaseFeature != None:
+        if hasattr(fp, "BaseFeature") and fp.BaseFeature is not None:
             # we're inside a PartDesign Body, thus need to fuse with the base feature
             ratchet_shape.Placement = fp.Placement # ensure the gear is placed correctly before fusing
             result_shape = fp.BaseFeature.Shape.fuse(ratchet_shape)
@@ -46,8 +47,9 @@ class BaseRatchet(object):
         raise NotImplementedError("_generate_ratchet not implemented")
 
 class Directed(BaseRatchet):
+    """ make a freecad object by applying the calculated vector coordinates fro the teeth class """
     def __init__(self, obj):
-        super(Directed, self).__init__(obj)
+        super().__init__(obj)
         properties = {
             'Radius': 25,
             'Teeth': 15,
@@ -79,26 +81,26 @@ class Directed(BaseRatchet):
         fp.ratchet.Curve = fp.Curve
         fp.ratchet.Pad = fp.Pad
         fp.ratchet._update()
-                
+
         vector = fp.ratchet.segments
         draft = []
         nextv = 1
-        for v in range(len(vector)):
-            if v < nextv:
+        for index, current_vector in enumerate(vector):
+            if index < nextv:
                 continue
-            if vector[v]['type'] == 'p':
-                if v<(len(vector)-1):
-                    draft.append(Part.LineSegment(  FreeCAD.Vector(vector[v-1]['x'], vector[v-1]['y'], vector[v-1]['z']),
-                                                    FreeCAD.Vector(vector[v]['x'], vector[v]['y'], vector[v]['z'])).toShape())
+            if current_vector['type'] == 'p':
+                if index < (len(vector) - 1):
+                    draft.append(Part.LineSegment(  FreeCAD.Vector(vector[index - 1]['x'], vector[index - 1]['y'], vector[index - 1]['z']),
+                                                    FreeCAD.Vector(vector[index]['x'], vector[index]['y'], vector[index]['z'])).toShape())
                 else:
-                    draft.append(Part.LineSegment(  FreeCAD.Vector(vector[v]['x'], vector[v]['y'], vector[v]['z']),
+                    draft.append(Part.LineSegment(  FreeCAD.Vector(vector[index]['x'], vector[index]['y'], vector[index]['z']),
                                                     FreeCAD.Vector(vector[0]['x'], vector[0]['y'], vector[0]['z'])).toShape())
-                nextv = v+1
-            elif vector[v]['type'] == 'r':
-                draft.append(Part.Arc(  FreeCAD.Vector(vector[v-1]['x'], vector[v-1]['y'], vector[v-1]['z']),
-                                        FreeCAD.Vector(vector[v]['x'], vector[v]['y'], vector[v]['z']),
-                                        FreeCAD.Vector(vector[v+1]['x'], vector[v+1]['y'], vector[v+1]['z'])).toShape())
-                nextv = v+2
+                nextv = index + 1
+            elif current_vector['type'] == 'r':
+                draft.append(Part.Arc(  FreeCAD.Vector(vector[index - 1]['x'], vector[index - 1]['y'], vector[index - 1]['z']),
+                                        FreeCAD.Vector(vector[index]['x'], vector[index]['y'], vector[index]['z']),
+                                        FreeCAD.Vector(vector[index + 1]['x'], vector[index + 1]['y'], vector[index + 1]['z'])).toShape())
+                nextv = index + 2
         wire = Part.Wire(draft)
         face = Part.Face(wire)
         if fp.ratchet.Pad > 0:
@@ -113,8 +115,9 @@ class Directed(BaseRatchet):
 
 
 class Double(BaseRatchet):
+    """ make a freecad object by applying the calculated vector coordinates fro the teeth class """
     def __init__(self, obj):
-        super(Double, self).__init__(obj)
+        super().__init__(obj)
         properties = {
             'Radius': 25,
             'Teeth': 15,
@@ -142,16 +145,16 @@ class Double(BaseRatchet):
         fp.ratchet.Toothheight = fp.Toothheight
         fp.ratchet.Pad = fp.Pad
         fp.ratchet._update()
-                
+
         vector = fp.ratchet.segments
         draft = []
-        for v in range(len(vector)):
-            if vector[v]['type'] == 'p':
-                if v<(len(vector)-1):
-                    draft.append(Part.LineSegment(  FreeCAD.Vector(vector[v]['x'], vector[v]['y'], vector[v]['z']),
-                                                    FreeCAD.Vector(vector[v+1]['x'], vector[v+1]['y'], vector[v+1]['z'])).toShape())
+        for index, current_vector in enumerate(vector):
+            if current_vector['type'] == 'p':
+                if index < (len(vector) - 1):
+                    draft.append(Part.LineSegment(  FreeCAD.Vector(vector[index]['x'], vector[index]['y'], vector[index]['z']),
+                                                    FreeCAD.Vector(vector[index + 1]['x'], vector[index + 1]['y'], vector[index + 1]['z'])).toShape())
                 else:
-                    draft.append(Part.LineSegment(  FreeCAD.Vector(vector[v]['x'], vector[v]['y'], vector[v]['z']),
+                    draft.append(Part.LineSegment(  FreeCAD.Vector(vector[index]['x'], vector[index]['y'], vector[index]['z']),
                                                     FreeCAD.Vector(vector[0]['x'], vector[0]['y'], vector[0]['z'])).toShape())
         wire = Part.Wire(draft)
         face = Part.Face(wire)
