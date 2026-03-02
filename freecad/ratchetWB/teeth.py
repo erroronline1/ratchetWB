@@ -17,7 +17,7 @@ class DirectedTeeth():
 
     def _calc_directed(self):
         if self.Teeth < 2:
-            tools.report(f"{self.Teeth} {QT_TRANSLATE_NOOP("App::Property", " is not a valid number of teeth. Please use 2+ teeth.")}")
+            tools.report(f"{self.Teeth} {QT_TRANSLATE_NOOP('App::Property', ' is not a valid number of teeth. Please use 2+ teeth.')}")
             return
         tooth = Math.pi*2 / self.Teeth
         floor=self.Radius - self.Toothheight
