@@ -1,7 +1,13 @@
+import os
 from .resources import icon
 from . import commands
-
 import FreeCAD, FreeCADGui
+
+__dirname__ = os.path.dirname(__file__)
+
+# Add translations path
+FreeCADGui.addLanguagePath(os.path.join(__dirname__, "resources", "translations"))
+FreeCADGui.updateLocale()
 
 QT_TRANSLATE_NOOP = FreeCAD.Qt.QT_TRANSLATE_NOOP
 
