@@ -94,15 +94,15 @@ class ViewRatchet():
 ################################################################################
 
 class Create_Directed(BaseCommand):
-    name = QT_TRANSLATE_NOOP("App::Property", "directed ratchet")
+    name = QT_TRANSLATE_NOOP("Create_Directed", "directed ratchet")
     function = tools.Directed
     pixmap = icon("icon")
-    menuText = QT_TRANSLATE_NOOP("App::Property", "directed")
-    toolTip = QT_TRANSLATE_NOOP("App::Property", "directed ratchet")
+    menuText = QT_TRANSLATE_NOOP("Create_Directed", "directed")
+    toolTip = QT_TRANSLATE_NOOP("Create_Directed", "directed ratchet")
 
-class Create_Double(BaseCommand):
-    name = QT_TRANSLATE_NOOP("App::Property", "double sided ratchet")
-    function = tools.Double
+class Create_Symmetrical(BaseCommand):
+    name = QT_TRANSLATE_NOOP("Create_Symmetrical", "symmetrical ratchet")
+    function = tools.Symmetrical
     pixmap = icon("Double")
-    menuText = QT_TRANSLATE_NOOP("App::Property", "double sided")
-    toolTip = QT_TRANSLATE_NOOP("App::Property", "double sided ratchet")
+    menuText = QT_TRANSLATE_NOOP("Create_Symmetrical", "symmetrical")
+    toolTip = QT_TRANSLATE_NOOP("Create_Symmetrical", "symmetrical ratchet")

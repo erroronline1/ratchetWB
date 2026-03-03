@@ -3,10 +3,13 @@ from .resources import icon
 from . import commands
 import FreeCAD, FreeCADGui
 
-__dirname__ = os.path.dirname(__file__)
+trans_path = os.path.join(
+	os.path.dirname(__file__),
+	"resources",
+	"translations"
+)
 
-# Add translations path
-FreeCADGui.addLanguagePath(os.path.join(__dirname__, "resources", "translations"))
+FreeCADGui.addLanguagePath(trans_path)
 FreeCADGui.updateLocale()
 
 QT_TRANSLATE_NOOP = FreeCAD.Qt.QT_TRANSLATE_NOOP
@@ -16,7 +19,7 @@ class ratchetWB(FreeCADGui.Workbench):
 		this is the main workbench class that embeds the menu and toolbar buttons with assigned functions
 	"""
 	MenuText = "Ratchet"
-	ToolTip = QT_TRANSLATE_NOOP("App::Property", "Create a ratchet")
+	ToolTip = QT_TRANSLATE_NOOP("ratchetWB", "Create a ratchet")
 	Icon = icon("icon")
 
 	def Initialize(self):
@@ -26,7 +29,7 @@ class ratchetWB(FreeCADGui.Workbench):
 
 		fn = {
 			"Create_Directed": commands.Create_Directed(),
-			"Create_Double": commands.Create_Double()
+			"Create_Symmetrical": commands.Create_Symmetrical()
 		}
 		self.appendToolbar("Ratchet", list(fn.keys()))
 		self.appendMenu("Ratchet", list(fn.keys()))

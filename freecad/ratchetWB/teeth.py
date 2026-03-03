@@ -17,7 +17,7 @@ class DirectedTeeth():
 
     def _calc_directed(self):
         if self.Teeth < 2:
-            tools.report(f"{self.Teeth} {QT_TRANSLATE_NOOP('App::Property', ' is not a valid number of teeth. Please use 2+ teeth.')}")
+            tools.report(f"{self.Teeth} {QT_TRANSLATE_NOOP('DirectedTeeth', ' is not a valid number of teeth. Please use 2+ teeth.')}")
             return
         tooth = Math.pi*2 / self.Teeth
         floor=self.Radius - self.Toothheight
@@ -33,8 +33,8 @@ class DirectedTeeth():
     def _update(self):
         self._calc_directed()
 
-class DoubleTeeth():
-    """ vector calculation for a double sided ratchet """
+class SymmetricalTeeth():
+    """ vector calculation for a symmetrical ratchet """
     def __init__(self, properties):
         self.Radius = properties['Radius']
         self.Teeth = properties['Teeth']

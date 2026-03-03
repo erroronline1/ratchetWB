@@ -59,12 +59,12 @@ class Directed(BaseRatchet):
         }
         self.ratchet = teeth.DirectedTeeth(properties)
 
-        obj.addProperty("App::PropertyLength", "Radius", QT_TRANSLATE_NOOP("App::Property", "Parameter"), QT_TRANSLATE_NOOP("App::Property", "Outer radius"))
-        obj.addProperty("App::PropertyInteger", "Teeth", QT_TRANSLATE_NOOP("App::Property", "Parameter"), QT_TRANSLATE_NOOP("App::Property", "Number of Teeth"))
-        obj.addProperty("App::PropertyLength", "Toothheight", QT_TRANSLATE_NOOP("App::Property", "Parameter"), QT_TRANSLATE_NOOP("App::Property", "Tooth height"))
-        obj.addProperty("App::PropertyFloat", "Curve", QT_TRANSLATE_NOOP("App::Property", "Parameter"), QT_TRANSLATE_NOOP("App::Property", "Curve"))
-        obj.addProperty("App::PropertyLength", "Pad", QT_TRANSLATE_NOOP("App::Property", "Parameter"), QT_TRANSLATE_NOOP("App::Property", "Pad"))
-        obj.addProperty("App::PropertyPythonObject", "ratchet", QT_TRANSLATE_NOOP("App::Property", "Parameter"), "ratchet object")
+        obj.addProperty("App::PropertyLength", "Radius", "Parameter", QT_TRANSLATE_NOOP("Directed", "Outer radius"))
+        obj.addProperty("App::PropertyInteger", "Teeth", "Parameter", QT_TRANSLATE_NOOP("Directed", "Number of Teeth"))
+        obj.addProperty("App::PropertyLength", "Toothheight", "Parameter", QT_TRANSLATE_NOOP("Directed", "Tooth height"))
+        obj.addProperty("App::PropertyFloat", "Curve", "Parameter", QT_TRANSLATE_NOOP("Directed", "Curve"))
+        obj.addProperty("App::PropertyLength", "Pad", "Parameter", QT_TRANSLATE_NOOP("Directed", "Pad"))
+        obj.addProperty("App::PropertyPythonObject", "ratchet", "Parameter", "ratchet object")
 
         obj.Radius = f"{properties['Radius']}. mm"
         obj.Teeth = properties['Teeth']
@@ -114,7 +114,7 @@ class Directed(BaseRatchet):
         return None
 
 
-class Double(BaseRatchet):
+class Symmetrical(BaseRatchet):
     """ make a freecad object by applying the calculated vector coordinates fro the teeth class """
     def __init__(self, obj):
         super().__init__(obj)
@@ -124,13 +124,13 @@ class Double(BaseRatchet):
             'Toothheight': 5,
             'Pad': 5
         }
-        self.ratchet = teeth.DoubleTeeth(properties)
+        self.ratchet = teeth.SymmetricalTeeth(properties)
 
-        obj.addProperty("App::PropertyLength", "Radius", QT_TRANSLATE_NOOP("App::Property", "Parameter"), QT_TRANSLATE_NOOP("App::Property", "Outer radius"))
-        obj.addProperty("App::PropertyInteger", "Teeth", QT_TRANSLATE_NOOP("App::Property", "Parameter"), QT_TRANSLATE_NOOP("App::Property", "Number of Teeth"))
-        obj.addProperty("App::PropertyLength", "Toothheight", QT_TRANSLATE_NOOP("App::Property", "Parameter"), QT_TRANSLATE_NOOP("App::Property", "Tooth height"))
-        obj.addProperty("App::PropertyLength", "Pad", QT_TRANSLATE_NOOP("App::Property", "Parameter"), QT_TRANSLATE_NOOP("App::Property", "Pad"))
-        obj.addProperty("App::PropertyPythonObject", "ratchet", QT_TRANSLATE_NOOP("App::Property", "Parameter"), "ratchet object")
+        obj.addProperty("App::PropertyLength", "Radius", "Parameter", QT_TRANSLATE_NOOP("Symmetrical", "Outer radius"))
+        obj.addProperty("App::PropertyInteger", "Teeth", "Parameter", QT_TRANSLATE_NOOP("Symmetrical", "Number of Teeth"))
+        obj.addProperty("App::PropertyLength", "Toothheight", "Parameter", QT_TRANSLATE_NOOP("Symmetrical", "Tooth height"))
+        obj.addProperty("App::PropertyLength", "Pad", "Parameter", QT_TRANSLATE_NOOP("Symmetrical", "Pad"))
+        obj.addProperty("App::PropertyPythonObject", "ratchet", "Parameter", "ratchet object")
 
         obj.Radius = f"{properties['Radius']}. mm"
         obj.Teeth = properties['Teeth']
