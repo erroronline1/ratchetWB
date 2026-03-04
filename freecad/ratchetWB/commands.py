@@ -3,7 +3,7 @@ from . import tools
 
 import FreeCAD, FreeCADGui
 
-QT_TRANSLATE_NOOP = FreeCAD.Qt.QT_TRANSLATE_NOOP
+translate = FreeCAD.Qt.translate
 
 class BaseCommand():
     """
@@ -94,15 +94,15 @@ class ViewRatchet():
 ################################################################################
 
 class Create_Directed(BaseCommand):
-    name = QT_TRANSLATE_NOOP("Create_Directed", "directed ratchet")
+    name = translate("Create_Directed", "directed ratchet")
     function = tools.Directed
     pixmap = icon("icon")
-    menuText = QT_TRANSLATE_NOOP("Create_Directed", "directed")
-    toolTip = QT_TRANSLATE_NOOP("Create_Directed", "directed ratchet")
+    menuText = translate("Create_Directed", "directed")
+    toolTip = translate("Create_Directed", "directed ratchet")
 
 class Create_Symmetrical(BaseCommand):
-    name = QT_TRANSLATE_NOOP("Create_Symmetrical", "symmetrical ratchet")
+    name = translate("Create_Symmetrical", "symmetrical ratchet")
     function = tools.Symmetrical
     pixmap = icon("Double")
-    menuText = QT_TRANSLATE_NOOP("Create_Symmetrical", "symmetrical")
-    toolTip = QT_TRANSLATE_NOOP("Create_Symmetrical", "symmetrical ratchet")
+    menuText = translate("Create_Symmetrical", "symmetrical")
+    toolTip = translate("Create_Symmetrical", "symmetrical ratchet")
