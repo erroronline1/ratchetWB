@@ -1,10 +1,9 @@
 from datetime import datetime
-from .resources import icon
 from . import teeth
 
 import FreeCAD, Part
 
-QT_TRANSLATE_NOOP = FreeCAD.Qt.QT_TRANSLATE_NOOP
+translate = FreeCAD.Qt.translate
 
 def report(msg):
     """ (error)-reporting to console """
@@ -51,34 +50,34 @@ class Directed(BaseRatchet):
     def __init__(self, obj):
         super().__init__(obj)
         properties = {
-            'Radius': 25,
-            'Teeth': 15,
-            'Toothheight': 5,
-            'Curve': .5,
+            'Outer_radius': 25,
+            'Number_of_teeth': 15,
+            'Tooth_height': 5,
+            'Tooth_curve': .5,
             'Pad': 5
         }
         self.ratchet = teeth.DirectedTeeth(properties)
 
-        obj.addProperty("App::PropertyLength", "Radius", "Parameter", QT_TRANSLATE_NOOP("Directed", "Outer radius"))
-        obj.addProperty("App::PropertyInteger", "Teeth", "Parameter", QT_TRANSLATE_NOOP("Directed", "Number of Teeth"))
-        obj.addProperty("App::PropertyLength", "Toothheight", "Parameter", QT_TRANSLATE_NOOP("Directed", "Tooth height"))
-        obj.addProperty("App::PropertyFloat", "Curve", "Parameter", QT_TRANSLATE_NOOP("Directed", "Curve"))
-        obj.addProperty("App::PropertyLength", "Pad", "Parameter", QT_TRANSLATE_NOOP("Directed", "Pad"))
+        obj.addProperty("App::PropertyLength", "Outer_radius", "Parameter", translate("App::Property", "Outer_radius"))
+        obj.addProperty("App::PropertyInteger", "Number_of_teeth", "Parameter", translate("App::Property", "Number_of_teeth"))
+        obj.addProperty("App::PropertyLength", "Tooth_height", "Parameter", translate("App::Property", "Tooth_height"))
+        obj.addProperty("App::PropertyFloat", "Tooth_curve", "Parameter", translate("App::Property", "Tooth_curve"))
+        obj.addProperty("App::PropertyLength", "Pad", "Parameter", translate("DirectApp::Propertyed", "Pad"))
         obj.addProperty("App::PropertyPythonObject", "ratchet", "Parameter", "ratchet object")
 
-        obj.Radius = f"{properties['Radius']}. mm"
-        obj.Teeth = properties['Teeth']
-        obj.Toothheight = f"{properties['Toothheight']}. mm"
-        obj.Curve = properties['Curve']
+        obj.Outer_radius = f"{properties['Outer_radius']}. mm"
+        obj.Number_of_teeth = properties['Number_of_teeth']
+        obj.Tooth_height = f"{properties['Tooth_height']}. mm"
+        obj.Tooth_curve = properties['Tooth_curve']
         obj.Pad = f"{properties['Pad']}. mm"
         obj.ratchet = self.ratchet
         obj.Proxy = self
 
     def _generate_ratchet(self, fp):
-        fp.ratchet.Radius = fp.Radius
-        fp.ratchet.Teeth = fp.Teeth
-        fp.ratchet.Toothheight = fp.Toothheight
-        fp.ratchet.Curve = fp.Curve
+        fp.ratchet.Outer_radius = fp.Outer_radius
+        fp.ratchet.Number_of_teeth = fp.Number_of_teeth
+        fp.ratchet.Tooth_height = fp.Tooth_height
+        fp.ratchet.Tooth_curve = fp.Tooth_curve
         fp.ratchet.Pad = fp.Pad
         fp.ratchet._update()
 
@@ -119,30 +118,30 @@ class Symmetrical(BaseRatchet):
     def __init__(self, obj):
         super().__init__(obj)
         properties = {
-            'Radius': 25,
-            'Teeth': 15,
-            'Toothheight': 5,
+            'Outer_radius': 25,
+            'Number_of_teeth': 15,
+            'Tooth_height': 5,
             'Pad': 5
         }
         self.ratchet = teeth.SymmetricalTeeth(properties)
 
-        obj.addProperty("App::PropertyLength", "Radius", "Parameter", QT_TRANSLATE_NOOP("Symmetrical", "Outer radius"))
-        obj.addProperty("App::PropertyInteger", "Teeth", "Parameter", QT_TRANSLATE_NOOP("Symmetrical", "Number of Teeth"))
-        obj.addProperty("App::PropertyLength", "Toothheight", "Parameter", QT_TRANSLATE_NOOP("Symmetrical", "Tooth height"))
-        obj.addProperty("App::PropertyLength", "Pad", "Parameter", QT_TRANSLATE_NOOP("Symmetrical", "Pad"))
+        obj.addProperty("App::PropertyLength", "Outer_radius", "Parameter", translate("App::Property", "Outer_radius"))
+        obj.addProperty("App::PropertyInteger", "Number_of_teeth", "Parameter", translate("App::Property", "Number_of_teeth"))
+        obj.addProperty("App::PropertyLength", "Tooth_height", "Parameter", translate("App::Property", "Tooth_height"))
+        obj.addProperty("App::PropertyLength", "Pad", "Parameter", translate("App::Property", "Pad"))
         obj.addProperty("App::PropertyPythonObject", "ratchet", "Parameter", "ratchet object")
 
-        obj.Radius = f"{properties['Radius']}. mm"
-        obj.Teeth = properties['Teeth']
-        obj.Toothheight = f"{properties['Toothheight']}. mm"
+        obj.Outer_radius = f"{properties['Outer_radius']}. mm"
+        obj.Number_of_teeth = properties['Number_of_teeth']
+        obj.Tooth_height = f"{properties['Tooth_height']}. mm"
         obj.Pad = f"{properties['Pad']}. mm"
         obj.ratchet = self.ratchet
         obj.Proxy = self
 
     def _generate_ratchet(self, fp):
-        fp.ratchet.Radius = fp.Radius
-        fp.ratchet.Teeth = fp.Teeth
-        fp.ratchet.Toothheight = fp.Toothheight
+        fp.ratchet.Outer_radius = fp.Outer_radius
+        fp.ratchet.Number_of_teeth = fp.Number_of_teeth
+        fp.ratchet.Tooth_height = fp.Tooth_height
         fp.ratchet.Pad = fp.Pad
         fp.ratchet._update()
 
