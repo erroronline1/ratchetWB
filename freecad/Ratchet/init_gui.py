@@ -6,7 +6,7 @@ import FreeCAD, FreeCADGui
 FreeCADGui.addLanguagePath(languagePath)
 FreeCADGui.updateLocale()
 
-class ratchetWB(FreeCADGui.Workbench):
+class Ratchet(FreeCADGui.Workbench):
 	"""
 		this is the main workbench class that embeds the menu and toolbar buttons with assigned functions
 	"""
@@ -14,7 +14,7 @@ class ratchetWB(FreeCADGui.Workbench):
 	translate = FreeCAD.Qt.translate
 
 	MenuText = "Ratchet"
-	ToolTip = translate("ratchetWB", "Create a ratchet")
+	ToolTip = translate("Ratchet", "Create a ratchet")
 	Icon = icon("icon")
 
 	def Initialize(self):
@@ -46,4 +46,4 @@ class ratchetWB(FreeCADGui.Workbench):
 		# This is not a template, the returned string should be exactly "Gui::PythonWorkbench"
 		return "Gui::PythonWorkbench"
 
-FreeCADGui.addWorkbench(ratchetWB())
+FreeCADGui.addWorkbench(Ratchet())

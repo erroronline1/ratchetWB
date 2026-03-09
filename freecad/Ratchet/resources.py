@@ -1,9 +1,9 @@
 import os
 from importlib import resources
-import freecad.ratchetWB as module
+import freecad.Ratchet as module
 import FreeCAD
 
-resourcefiles = resources.files(module) / "resources"
+iconfiles = resources.files(module) / "resources" / "icons"
 
 languagePath = os.path.join(
 	os.path.dirname(__file__),
@@ -14,6 +14,6 @@ languagePath = os.path.join(
 def icon(name: str):
 	"""	returns an icon file path """
 	file = name + ".svg"
-	iconpath = resourcefiles / file
+	iconpath = iconfiles / file
 	with resources.as_file(iconpath) as path:
 		return str(path)

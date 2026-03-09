@@ -71,9 +71,9 @@ update_locale() {
 	[ ! -f "${WB}${u}${locale}.ts" ] && action="Creating" || action="Updating"
 	echo -e "\033[1;34m\n\t<<< ${action} '${WB}${u}${locale}.ts' file >>>\n\033[m"
 	if [ "$u" == "" ]; then
-		$LUPDATE ../*.py -ts "${WB}.ts" # locale-agnostic file
+		$LUPDATE ../../*.py -ts "${WB}.ts" # locale-agnostic file
 	else
-		$LUPDATE ../*.py -source-language en_US -target-language "${locale//-/_}" \
+		$LUPDATE ../../*.py -source-language en_US -target-language "${locale//-/_}" \
 			-ts "${WB}_${locale}.ts"
 	fi
 }

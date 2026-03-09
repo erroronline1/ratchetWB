@@ -13,7 +13,7 @@
 <!--toc:end-->
 
 > [!NOTE]
-> All commands **must** be run in `./freecad/ratchetWB/translations/` directory.
+> All commands **must** be run in `./freecad/Ratchet/resources/translations/` directory.
 
 > [!IMPORTANT]
 > If you want to update/release the files you need to have installed

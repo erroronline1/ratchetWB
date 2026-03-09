@@ -1,5 +1,5 @@
 [project]
-name = "ratchetWB"
+name = "Ratchet"
 version = "0.1.0"
 description = "A FreeCAD workbench to quickly create ratchets"
 authors = [

@@ -17,7 +17,7 @@
     <!--[ Info ]―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――-->
 
     <description>A FreeCAD workbench to quickly create ratchets</description>
-    <name>ratchetWB</name>
+    <name>Ratchet</name>
 
     <!--[ Tags ]―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――-->
 
@@ -43,7 +43,7 @@
 
     <!--[ Icon ]―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――-->
 
-    <icon>freecad/ratchetWB/resources/icon.svg</icon>
+    <icon>freecad/Ratchet/resources/icon.svg</icon>
 
     <!--[ Urls ]―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――-->
 
@@ -70,7 +70,7 @@
 
     <url
         type = 'readme'
-    >https://github.com/erroronline1/ratchetWB/blob/main/Overview.md</url>
+    >https://github.com/erroronline1/ratchetWB/blob/main/resources/documents/Overview.md</url>
 
     <!--[ Content ]――――――――――――――――――――――――――――――――――――――――――――――――――――――――――-->
 
@@ -80,11 +80,11 @@
 
         <workbench>
 
-            <name>ratchetWB</name>
+            <name>Ratchet</name>
             <description>A FreeCAD workbench to quickly create ratchets</description>
 
             <subdirectory>./</subdirectory>
-            <classname>ratechetWB</classname>
+            <classname>Ratchet</classname>
 
             <!--depend>numpy</depend-->
             <!--depend>match with pyproject.toml</depend-->

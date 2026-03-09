@@ -3,11 +3,11 @@
 A FreeCAD workbench to create ratchets
 
 ### Background
-Considering manually constructing circular ratchets an annoing task you can now choose between the automated creation of ratchets that allow only for one direction or ratches that allow both directions. For inset mechanisms you can just subtract the generated shape.
+Considering manually constructing circular ratchets an annoying task you can now choose between the automated creation of ratchets that allow only for one direction or ratches that allow both directions. For inset mechanisms you can just subtract the generated shape.
 
 Heavily <s>stolen</s> inspired from [looooos freecad.gears](https://github.com/looooo/freecad.gears).
 
-![screenshot](https://raw.githubusercontent.com/erroronline1/ratchetWB/master/freecad/ratchetWB/resources/screenshot.png)
+![screenshot](https://raw.githubusercontent.com/erroronline1/ratchetWB/master/resources/media/screenshot.png)
 
 ### Version compatibility
 
@@ -41,18 +41,14 @@ This workbench can be installed manually by adding the whole folder into the per
 - for Windows as portable app `wherever_stored\FreeCADPortable\Data\FreeCADAppData\Mod`
 - for macOS `~/Library/Preferences/FreeCAD/Mod/`
 
-Occasionally rename from ratchetWB-master to ratchetWB if downloaded as zip from github
+Occasionally rename from Ratchet-master to Ratchet if downloaded as zip from github
 
 </details>
 
-### Customize
-
-Different languages according to user settings are technically supported - but actually restricted to english by default and german due to my own limitations. This might be more proof-of-concept than actually useful but feel free to contribute :) Since one does usually not switch languages by the minute I did not bother finding out how to update during runtime yet, so FreeCad has to be restarted to have language-changes take effect on this workbench.
-
 ### Bug/Feedback
 
-Please report bugs to the [issue queue](https://github.com/erroronline1/ratchetWB/issues) and ping the [dedicated ratchetWB FreeCAD forum thread](https://forum.freecadweb.org/viewtopic.php?f=22&t=71072) to discuss said issue or feedback in general.   
+Please report bugs to the [issue queue](https://github.com/erroronline1/ratchetWB/issues) and ping the [dedicated Ratchet FreeCAD forum thread](https://forum.freecadweb.org/viewtopic.php?f=22&t=71072) to discuss said issue or feedback in general.   
 
 ## License
 
-ratchetWB is released under the LGPL3+ license. See [LICENSE](LICENSE).
+Ratchet is released under the LGPL3+ license. See [LICENSE](LICENSE).
