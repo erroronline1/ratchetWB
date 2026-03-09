@@ -40,9 +40,9 @@ class BaseCommand():
 
     def Activated(self):
         doc = FreeCAD.ActiveDocument
-        FreeCADGui.doCommandGui("import freecad.ratchetWB.commands")
+        FreeCADGui.doCommandGui("import freecad.Ratchet.commands")
         doc.openTransaction(self.toolTip)
-        FreeCADGui.doCommandGui(f'freecad.ratchetWB.commands.{self.__class__.__name__}.create()')
+        FreeCADGui.doCommandGui(f'freecad.Ratchet.commands.{self.__class__.__name__}.create()')
         doc.commitTransaction()
         doc.recompute()
         FreeCADGui.SendMsgToActiveView("ViewFit")
