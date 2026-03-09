@@ -1,7 +1,9 @@
+# SPDX-License-Identifier: LGPL-3.0-or-later
+# SPDX-FileNotice: Part of the Ratchet workbench addon.
+
 from .resources import icon, languagePath
 from . import commands
 import FreeCAD, FreeCADGui
-
 
 FreeCADGui.addLanguagePath(languagePath)
 FreeCADGui.updateLocale()

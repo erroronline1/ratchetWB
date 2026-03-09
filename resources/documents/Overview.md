@@ -1,3 +1,6 @@
+<!-- SPDX-License-Identifier: LGPL-3.0-or-later -->
+<!--  SPDX-FileNotice: Part of the Ratchet workbench addon. -->
+
 # Ratchet Workbench 
 
 A FreeCAD workbench to create ratchets

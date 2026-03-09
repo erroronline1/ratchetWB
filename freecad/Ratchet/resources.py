@@ -1,3 +1,6 @@
+# SPDX-License-Identifier: LGPL-3.0-or-later
+# SPDX-FileNotice: Part of the Ratchet workbench addon.
+
 import os
 from importlib import resources
 import freecad.Ratchet as module
