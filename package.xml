@@ -18,12 +18,12 @@
 
     <!--[ Info ]―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――-->
 
-    <description>A FreeCAD workbench to quickly create ratchets</description>
+    <description>Workbench to quickly create ratchets.</description>
     <name>Ratchet</name>
 
     <!--[ Tags ]―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――-->
 
-    <tag>ratchet</tag>
+    <tag>Ratchets</tag>
 
     <!--[ Maintainers ]――――――――――――――――――――――――――――――――――――――――――――――――――――――-->
 
@@ -78,21 +78,9 @@
 
     <content>
 
-        <!--[ Workbench ]――――――――――――――――――――――――――――――――――――――――――――――――――-->
-
         <workbench>
-
-            <name>Ratchet</name>
-            <description>A FreeCAD workbench to quickly create ratchets</description>
-
-            <subdirectory>./</subdirectory>
+            <subdirectory>.</subdirectory>
             <classname>Ratchet</classname>
-
-            <!--depend>numpy</depend-->
-            <!--depend>match with pyproject.toml</depend-->
-
-            <tag>ratchets</tag>
-        
         </workbench>
 
     </content>
