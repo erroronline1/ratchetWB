@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: LGPL-3.0-or-later
-# SPDX-FileNotice: Part of the Ratchet workbench addon.
+# SPDX-FileNotice: Part of the Ratchet addon.
 
 import os
 from importlib import resources
