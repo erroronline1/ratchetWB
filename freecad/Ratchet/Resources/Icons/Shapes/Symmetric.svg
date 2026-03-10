@@ -5,10 +5,11 @@
    viewBox="0 0 64.499998 64.499998"
    version="1.1"
    id="svg1525"
-   sodipodi:docname="Double.svg"
-   inkscape:version="1.4.3 (0d15f75042, 2025-12-25)"
+   sodipodi:docname="Symmetric.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -25,14 +26,15 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      inkscape:zoom="3.6467377"
-     inkscape:cx="121.75265"
-     inkscape:cy="121.88976"
-     inkscape:window-width="1920"
-     inkscape:window-height="1133"
+     inkscape:cx="101.04922"
+     inkscape:cy="155.07011"
+     inkscape:window-width="2480"
+     inkscape:window-height="1044"
      inkscape:window-x="0"
-     inkscape:window-y="1080"
+     inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg1525" />
+     inkscape:current-layer="svg1525"
+     showgrid="false" />
   <metadata
      id="metadata1531">
     <rdf:RDF>
@@ -41,15 +43,36 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <defs
-     id="defs1529" />
+     id="defs1529">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient916">
+      <stop
+         style="stop-color:#3474bd;stop-opacity:1;"
+         offset="0"
+         id="stop912" />
+      <stop
+         style="stop-color:#618ec1;stop-opacity:1;"
+         offset="1"
+         id="stop914" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient916"
+       id="linearGradient918"
+       x1="1.0429688"
+       y1="242.89258"
+       x2="148.95647"
+       y2="85.595901"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
   <path
      id="path832"
-     style="fill:#ebcb8b;fill-rule:evenodd;stroke:#2e3440;stroke-width:1.88976;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:1.70078;paint-order:fill markers stroke;stop-color:#000000;fill-opacity:1;stroke-opacity:1"
+     style="fill:url(#linearGradient918);fill-rule:evenodd;stroke:#2e3440;stroke-width:1.88976;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:1.70078;paint-order:fill markers stroke;stop-color:#000000;fill-opacity:1;stroke-opacity:1"
      d="M 36.539062 16.048828 L 1.0429688 37.632812 L 1.0429688 242.89258 L 206.21484 242.89258 L 231.09961 183.99805 L 164.20312 181.13867 L 177.73047 115.56055 L 111.56055 125.80664 L 112.03516 58.851562 L 49.136719 81.810547 L 36.539062 16.048828 z "
      transform="scale(0.26458333)" />
 </svg>

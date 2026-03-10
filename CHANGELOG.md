@@ -9,7 +9,7 @@
 
 ### Added
 
--   Add symmetrical teeth
+-   Add symmetric teeth
 
 -   Add directed teeth
 

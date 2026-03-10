@@ -10,9 +10,16 @@
     xmlns = 'https://wiki.freecad.org/Package_Metadata'
 >
 
+    <!--[ Dependencies ]―――――――――――――――――――――――――――――――――――――――――――――――――――――-->
+
+    <depend
+        type = 'internal'
+    >part</depend>
+
     <!--[ Versions ]―――――――――――――――――――――――――――――――――――――――――――――――――――――――――-->
 
-    <freecadmin>0.20.0</freecadmin>
+    <freecadmin>1.1.0</freecadmin>
+    <pythonmin>3.11</pythonmin>
     <version>0.1.0</version>
     <date>2026-02-28</date>
 
@@ -45,7 +52,7 @@
 
     <!--[ Icon ]―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――-->
 
-    <icon>freecad/Ratchet/resources/icon.svg</icon>
+    <icon>freecad/Ratchet/Resources/Addon.svg</icon>
 
     <!--[ Urls ]―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――-->
 
@@ -61,7 +68,7 @@
     <url
         type = 'bugtracker'
     >https://github.com/erroronline1/ratchetWB/issues</url>
-    
+
     <url
         type = 'discussion'
     >https://forum.freecad.org/viewtopic.php?p=617631</url>
@@ -72,17 +79,12 @@
 
     <url
         type = 'readme'
-    >https://raw.githubusercontent.com/erroronline1/ratchetWB/refs/heads/main/resources/documents/Overview.md</url>
+    >https://raw.githubusercontent.com/erroronline1/ratchetWB/refs/heads/main/Resources/Documents/Overview.md</url>
 
     <!--[ Content ]――――――――――――――――――――――――――――――――――――――――――――――――――――――――――-->
 
     <content>
-
-        <workbench>
-            <subdirectory>.</subdirectory>
-            <classname>Ratchet</classname>
-        </workbench>
-
+        <other/>
     </content>
 
 </package>
