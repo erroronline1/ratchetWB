@@ -3,25 +3,34 @@
     encoding = 'UTF-8'
     standalone = 'no'
 ?>
+<!-- SPDX-License-Identifier: LGPL-3.0-or-later -->
+<!-- SPDX-FileNotice: Part of the Ratchet addon. -->
 <package
     format = '1'
     xmlns = 'https://wiki.freecad.org/Package_Metadata'
 >
 
+    <!--[ Dependencies ]―――――――――――――――――――――――――――――――――――――――――――――――――――――-->
+
+    <depend
+        type = 'internal'
+    >part</depend>
+
     <!--[ Versions ]―――――――――――――――――――――――――――――――――――――――――――――――――――――――――-->
 
-    <freecadmin>0.20.0</freecadmin>
+    <freecadmin>1.1.0</freecadmin>
+    <pythonmin>3.11</pythonmin>
     <version>0.1.0</version>
     <date>2026-02-28</date>
 
     <!--[ Info ]―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――-->
 
-    <description>A FreeCAD workbench to quickly create ratchets</description>
+    <description>Workbench to quickly create ratchets.</description>
     <name>Ratchet</name>
 
     <!--[ Tags ]―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――-->
 
-    <tag>ratchet</tag>
+    <tag>Ratchets</tag>
 
     <!--[ Maintainers ]――――――――――――――――――――――――――――――――――――――――――――――――――――――-->
 
@@ -43,7 +52,7 @@
 
     <!--[ Icon ]―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――-->
 
-    <icon>freecad/Ratchet/resources/icon.svg</icon>
+    <icon>freecad/Ratchet/Resources/Addon.svg</icon>
 
     <!--[ Urls ]―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――-->
 
@@ -59,7 +68,7 @@
     <url
         type = 'bugtracker'
     >https://github.com/erroronline1/ratchetWB/issues</url>
-    
+
     <url
         type = 'discussion'
     >https://forum.freecad.org/viewtopic.php?p=617631</url>
@@ -70,29 +79,12 @@
 
     <url
         type = 'readme'
-    >https://github.com/erroronline1/ratchetWB/blob/main/resources/documents/Overview.md</url>
+    >https://raw.githubusercontent.com/erroronline1/ratchetWB/refs/heads/main/Resources/Documents/Overview.md</url>
 
     <!--[ Content ]――――――――――――――――――――――――――――――――――――――――――――――――――――――――――-->
 
     <content>
-
-        <!--[ Workbench ]――――――――――――――――――――――――――――――――――――――――――――――――――-->
-
-        <workbench>
-
-            <name>Ratchet</name>
-            <description>A FreeCAD workbench to quickly create ratchets</description>
-
-            <subdirectory>./</subdirectory>
-            <classname>Ratchet</classname>
-
-            <!--depend>numpy</depend-->
-            <!--depend>match with pyproject.toml</depend-->
-
-            <tag>ratchets</tag>
-        
-        </workbench>
-
+        <other/>
     </content>
 
 </package>

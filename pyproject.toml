@@ -1,27 +1,13 @@
 # SPDX-License-Identifier: LGPL-3.0-or-later
-# SPDX-FileNotice: Part of the Ratchet workbench addon.
+# SPDX-FileNotice: Part of the Ratchet addon.
 
 [project]
-name = "Ratchet"
-version = "0.1.0"
-description = "A FreeCAD workbench to quickly create ratchets"
-authors = [
-  {name = "error on line 1", email = "dev@erroronline.one"},
-]
-maintainers = [
-  {name = "error on line 1", email = "dev@erroronline.one"}
-]
-license = "LGPL-3.0-or-later"
-license-files = ["LICEN[CS]E.*"]
-readme = "README.md"
-keywords = ["ratchets", "addon", "freecad", "workbench"]
+version = '0.0.0' # No need to update
+name = 'Addon'    # these two properties.
+
+requires-python = '>=3.11'
 
 dependencies = [
-# "numpy"
-# see https://packaging.python.org/en/latest/guides/writing-pyproject-toml/
-# match with package.xml
-]
-requires-python = ">=3.8"
-classifiers = [
-  "Programming Language :: Python"
+    'freecad-stubs>=1.0.21' ,
+    'pyside6>=6.9.2'
 ]

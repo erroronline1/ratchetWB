@@ -1,57 +1,37 @@
 <!-- SPDX-License-Identifier: LGPL-3.0-or-later -->
-<!--  SPDX-FileNotice: Part of the Ratchet workbench addon. -->
+<!-- SPDX-FileNotice: Part of the Ratchet addon. -->
 
-## Ratchet Workbench 
+<div align = 'center' >
 
-A FreeCAD workbench to create ratchets
+# Ratchet 
 
-### Background
-Considering manually constructing circular ratchets an annoying task you can now choose between the automated creation of ratchets that allow only for one direction or ratches that allow both directions. For inset mechanisms you can just subtract the generated shape.
+FreeCAD addon for ratchet creation.
 
-Heavily <s>stolen</s> inspired from [looooos freecad.gears](https://github.com/looooo/freecad.gears).
+[ [Forum Discussion][Forum] ]
 
-![screenshot](https://raw.githubusercontent.com/erroronline1/ratchetWB/master/resources/media/screenshot.png)
+![Preview]
 
-### Version compatibility
+</div>
 
-<details>
-<summary>Confirmed latest stable FreeCad version 1.0 - Expand for more</summary>
+<br/>
 
-* 1.1rc build 40041 x86_64
-* 1.0
-* 0.21.2
-* 0.20
-
-</details>
-
-### Usage
+## Usage
 
 Add one of the desired geometries either as a part or as part of an active body. Change values regarding e.g. size and number of teeth within the models property settings. Possibly edit the Curve-property for inset directed ratchets.
 
-There is not a complete failsafe mechanism to avoid all possible meaningless values! 
+There is not a complete failsafe mechanism to avoid all possible meaningless values!  
 
-### Installation 
+<br/>
 
-#### Manual Installation
+## Background
 
-<details>
-<summary>Expand for directions to manually install this workbench</summary>
+Considering manually constructing circular ratchets an annoying task you can now choose between the automated creation of ratchets that allow only for one direction or ratches that allow both directions. For inset mechanisms you can just subtract the generated shape.
 
-This workbench can be installed manually by adding the whole folder into the personal FreeCAD folder
+*Originally inspired by looooos [Gears] addon.*
 
-- for Linux `/home/user/.local/share/FreeCAD/Mod/` or `~/.var/app/org.freecad.FreeCAD/data/FreeCAD/Mod`
-- for Windows `%APPDATA%\FreeCAD\Mod\` or `C:\Users\username\Appdata\Roaming\FreeCAD\Mod\`
-- for Windows as portable app `wherever_stored\FreeCADPortable\Data\FreeCADAppData\Mod`
-- for macOS `~/Library/Preferences/FreeCAD/Mod/`
+<br/>
 
-Occasionally rename from Ratchet-master to Ratchet if downloaded as zip from github
 
-</details>
-
-### Bug/Feedback
-
-Please report bugs to the [issue queue](https://github.com/erroronline1/ratchetWB/issues) and ping the [dedicated Ratchet FreeCAD forum thread](https://forum.freecadweb.org/viewtopic.php?f=22&t=71072) to discuss said issue or feedback in general.   
-
-## License
-
-Ratchet is released under the LGPL3+ license. See [LICENSE](LICENSE).
+[Preview]: ./Resources/Media/Preview.png
+[Forum]: https://forum.freecadweb.org/viewtopic.php?f=22&t=71072
+[Gears]: https://github.com/looooo/freecad.gears

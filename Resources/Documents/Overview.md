@@ -1,5 +1,5 @@
 <!-- SPDX-License-Identifier: LGPL-3.0-or-later -->
-<!--  SPDX-FileNotice: Part of the Ratchet workbench addon. -->
+<!-- SPDX-FileNotice: Part of the Ratchet addon. -->
 
 # Ratchet Workbench 
 
@@ -7,7 +7,7 @@ A FreeCAD workbench to create ratchets
 
 Considering manually constructing circular ratchets an annoing task you can now choose between the automated creation of ratchets that allow only for one direction or ratches that allow both directions. For inset mechanisms you can just subtract the generated shape.
 
-![screenshot](https://raw.githubusercontent.com/erroronline1/ratchetWB/master/resources/media/screenshot.png)
+![screenshot](https://raw.githubusercontent.com/erroronline1/ratchetWB/master/Resources/Media/Preview.png)
 
 ### Usage
 
