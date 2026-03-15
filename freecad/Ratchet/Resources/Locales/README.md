@@ -1,7 +1,7 @@
-# About translating Gear Workbench
+# About translating this Workbench
 
 <!--toc:start-->
-- [About translating Gear Workbench](#about-translating-gear-workbench)
+- [About translating this Workbench](#about-translating-this-workbench)
   - [Updating translations template file](#updating-translations-template-file)
   - [Creating file for missing locale](#creating-file-for-missing-locale)
     - [Using script](#using-script)
@@ -11,6 +11,23 @@
   - [Sending translations](#sending-translations)
   - [More information](#more-information)
 <!--toc:end-->
+
+This README-file has been originally tkaen from the Gears workbench and adapted to Ratchet.
+
+Current deviation:  
+I have not been able yet to have
+```
+<context>
+    <name>DirectedTeeth</name>
+    <message>
+        <location filename="../../Shaped/Directed/__init__.py" line="16"/>
+        <source>is not a valid number of teeth. Please use 2+ teeth.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+```
+detected by lupdate. This may have to be added manually to the ts files. Works if present. Cheerio! 
+
 
 > [!NOTE]
 > All commands **must** be run in `./freecad/Ratchet/Resources/Locales/` directory.
@@ -83,7 +100,7 @@ package or in a text editor like `xed`, `mousepad`, `gedit`, `nano`, `vim`/`nvim
 
 Alternatively you can visit the **FreeCAD-addons** project on CrowdIn platform
 at <https://crowdin.com/project/freecad-addons> webpage and find your language,
-once done, look for the **Gear** project.
+once done, look for the **Ratchet** project.
 
 ## Compiling translations
 

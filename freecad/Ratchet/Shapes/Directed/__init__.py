@@ -7,6 +7,8 @@ from .Properties import defineProperties
 from .Document import DirectedObject
 from .Shape import generate
 
+from ...Misc import report
+
 from FreeCAD import Qt , Gui
 
 
@@ -37,7 +39,10 @@ class Directed ( BaseRatchet ):
         object.Proxy = self
 
     def generate ( self , object : DirectedObject ):
-        return generate(object)
+        result = generate(object)
+        if result is None:
+            report(f'{ object.Count } { translate("DirectedTeeth","is not a valid number of teeth. Please use 2+ teeth.") }')
+        return result
 
     def attachView ( self , view : ViewProvider ):
 

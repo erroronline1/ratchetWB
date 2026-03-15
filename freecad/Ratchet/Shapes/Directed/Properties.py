@@ -45,21 +45,21 @@ def defineProperties (
 
     property(
         description = translate('App::Property','Count') ,
-        group = 'Tooth' ,
+        group = 'Teeth' ,
         name = 'Count' ,
         type = 'Integer'
     )
 
     property(
         description = translate('App::Property','Depth') ,
-        group = 'Tooth' ,
+        group = 'Teeth' ,
         name = 'Depth' ,
         type = 'Length'
     )
 
     property(
         description = translate('App::Property','Curve') ,
-        group = 'Tooth' ,
+        group = 'Teeth' ,
         name = 'Curve' ,
         type = 'Float'
     )

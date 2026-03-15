@@ -5,6 +5,9 @@ from ..PySide.QtWidgets import QToolBar
 from ..Shapes import Symmetric , Directed
 from .Command import Command
 
+from FreeCAD import Qt
+
+translate = Qt.translate
 
 def registerCommands (
     toolbar : QToolBar
@@ -13,11 +16,13 @@ def registerCommands (
     Command(
         toolbar = toolbar ,
         shape = Symmetric ,
-        key = 'Symmetric'
+        key = 'Symmetric',
+        name = translate('Command','Symmetric ratchet')
     )
 
     Command(
         toolbar = toolbar ,
         shape = Directed ,
-        key = 'Directed'
+        key = 'Directed',
+        name = translate('Command','Directed ratchet')
     )

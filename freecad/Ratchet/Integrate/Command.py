@@ -14,9 +14,6 @@ from typing import Any
 
 translate = Qt.translate
 
-Tooltip = translate('Command.Tooltip','Generate a {{ Name }}')
-
-
 class Command:
 
     tooltip : str
@@ -28,14 +25,16 @@ class Command:
         self ,
         shape : object ,
         toolbar : QToolBar ,
-        key : str
+        key : str,
+        name: str
     ):
 
         self.shape = shape
         self.icon = asIcon(f'Shapes/{ key }')
 
-        self.name = key
+        self.name = name
 
+        Tooltip = translate('Command.Tooltip','Generate a {{ Name }}')
         self.tooltip = Tooltip.replace(r'{{ Name }}',self.name)
 
         Gui.addCommand(f'Ratchet-{ key }',self)

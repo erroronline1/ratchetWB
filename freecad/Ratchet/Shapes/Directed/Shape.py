@@ -6,8 +6,6 @@ from typing import TypedDict
 from Part import LineSegment , Wire , Face , Arc
 from math import sin , cos , pi
 
-from ...Misc import report
-
 from .Document import DirectedObject
 
 
@@ -34,8 +32,7 @@ def generate (
     ############################################################################
 
     if tooth_count < 2 :
-        report(f'{ tooth_count } { translate("DirectedTeeth","is not a valid number of teeth. Please use 2+ teeth.") }')
-        return
+        return None
 
     ############################################################################
 
