@@ -17,6 +17,8 @@ FreeCAD addon for ratchet creation.
 
 ## Usage
 
+The functions are available through the Part-workbench.
+
 Add one of the desired geometries either as a part or as part of an active body. Change values regarding e.g. size and number of teeth within the models property settings. Possibly edit the Curve-property for inset directed ratchets.
 
 There is not a complete failsafe mechanism to avoid all possible meaningless values!  
