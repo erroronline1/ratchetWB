@@ -36,7 +36,7 @@
 <context>
     <name>Command</name>
     <message>
-        <location filename="../../Integrate/Commands.py" line="21"/>
+        <location filename="../../Integrate/Commands.py" line="20"/>
         <source>Symmetric ratchet</source>
         <translation>symmetrisches Sperrrad</translation>
     </message>
@@ -45,13 +45,30 @@
         <source>Directed ratchet</source>
         <translation>gelenktes Sperrad</translation>
     </message>
+    <message>
+        <location filename="../../Integrate/Commands.py" line="40"/>
+        <source>Symmetric ratchet cut</source>
+        <translation>symmetrisches Sperrrad ausschneiden</translation>
+    </message>
+    <message>
+        <location filename="../../Integrate/Commands.py" line="48"/>
+        <source>Directed ratchet cut</source>
+        <translation>gelenktes Sperrrad ausschneiden</translation>
+    </message>
 </context>
 <context>
     <name>Command.Tooltip</name>
     <message>
-        <location filename="../../Integrate/Command.py" line="38"/>
+        <location filename="../../Integrate/Command.py" line="39"/>
         <source>Generate a {{ Name }}</source>
         <translation>Erzeuge ein {{Name}}</translation>
+    </message>
+</context>
+<context>
+    <name>DirectedTeeth</name>
+    <message>
+        <source>is not a valid number of teeth. Please use 2+ teeth.</source>
+        <translation type="vanished"> ist keine gültige Anzahl and Zähnen. Nutze 2 oder mehr.</translation>
     </message>
 </context>
 <context>
@@ -65,14 +82,6 @@
         <location filename="../../Integrate/Toolbar.py" line="19"/>
         <source>Ratchet</source>
         <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>DirectedTeeth</name>
-    <message>
-        <location filename="../../Shaped/Directed/__init__.py" line="16"/>
-        <source>is not a valid number of teeth. Please use 2+ teeth.</source>
-        <translation> ist keine gültige Anzahl and Zähnen. Nutze 2 oder mehr.</translation>
     </message>
 </context>
 </TS>

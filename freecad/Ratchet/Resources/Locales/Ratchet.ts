@@ -36,7 +36,7 @@
 <context>
     <name>Command</name>
     <message>
-        <location filename="../../Integrate/Commands.py" line="21"/>
+        <location filename="../../Integrate/Commands.py" line="20"/>
         <source>Symmetric ratchet</source>
         <translation type="unfinished"></translation>
     </message>
@@ -45,11 +45,21 @@
         <source>Directed ratchet</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="../../Integrate/Commands.py" line="40"/>
+        <source>Symmetric ratchet cut</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../Integrate/Commands.py" line="48"/>
+        <source>Directed ratchet cut</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Command.Tooltip</name>
     <message>
-        <location filename="../../Integrate/Command.py" line="38"/>
+        <location filename="../../Integrate/Command.py" line="39"/>
         <source>Generate a {{ Name }}</source>
         <translation type="unfinished"></translation>
     </message>
@@ -64,14 +74,6 @@
     <message>
         <location filename="../../Integrate/Toolbar.py" line="19"/>
         <source>Ratchet</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>DirectedTeeth</name>
-    <message>
-        <location filename="../../Shaped/Directed/__init__.py" line="16"/>
-        <source>is not a valid number of teeth. Please use 2+ teeth.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
