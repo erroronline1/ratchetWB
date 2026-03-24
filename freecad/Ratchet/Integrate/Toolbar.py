@@ -62,7 +62,7 @@ def isPartActive ():
 
     name = workbench.name()
 
-    return name == 'PartWorkbench'
+    return name in ('PartWorkbench', 'PartDesignWorkbench')
 
 
 timer.timeout.connect(insertToolbar)
