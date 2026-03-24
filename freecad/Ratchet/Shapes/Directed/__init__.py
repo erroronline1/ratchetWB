@@ -23,9 +23,9 @@ class Directed ( BaseRatchet ):
 
     type = 'Directed'
 
-    def __init__ ( self , object : DirectedObject ):
+    def __init__ ( self , object : DirectedObject, boolean: str = "fuse"):
 
-        super().__init__(object)
+        super().__init__(object, boolean)
 
         defineProperties(object)
 

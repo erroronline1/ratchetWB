@@ -26,12 +26,13 @@ class Command:
         shape : object ,
         toolbar : QToolBar ,
         key : str,
-        name: str
+        name: str,
+        boolean: str
     ):
 
         self.shape = shape
         self.icon = asIcon(f'Shapes/{ key }')
-
+        self.boolean = boolean # fuse or cut
         self.name = name
 
         Tooltip = translate('Command.Tooltip','Generate a {{ Name }}')
@@ -76,11 +77,11 @@ class Command:
                 type = 'PartDesign::FeaturePython'
 
             object : DocumentObject = document \
-                .addObject(type,self.name)
+                .addObject(type, self.name)
 
             view = object.ViewObject
 
-            shape = self.shape(object)
+            shape = self.shape(object, self.boolean)
 
             if view:
                 shape.attachView(view)

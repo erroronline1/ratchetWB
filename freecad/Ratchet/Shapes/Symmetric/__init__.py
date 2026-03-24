@@ -21,9 +21,9 @@ class Symmetric ( BaseRatchet ):
 
     type = 'Symmetric'
 
-    def __init__ ( self , object : SymmetricObject ):
+    def __init__ ( self , object : SymmetricObject, boolean: str = "fuse" ):
 
-        super().__init__(object)
+        super().__init__(object, boolean)
 
         defineProperties(object)
 

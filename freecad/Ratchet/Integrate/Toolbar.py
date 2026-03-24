@@ -5,7 +5,7 @@ from ..PySide.QtWidgets import QMainWindow , QToolBar
 from ..PySide.QtCore import QTimer
 
 from ..Misc.Document import DocumentSwitch
-from .Commands import registerCommands
+from .Commands import registerFuseCommands, registerCutCommands
 
 from FreeCAD import Gui , Qt , addDocumentObserver
 
@@ -16,38 +16,63 @@ tooltip = translate('Toolbar','[ Ratchets ]')
 title = translate('Toolbar','Ratchet')
 
 
-toolbar = None
-
+PartToolbar = None
+PartDesignToolbar = None
 
 timer = QTimer()
 timer.setSingleShot(True)
 
-def insertToolbar ():
+def insertPartToolbar ():
 
-    visible = isPartActive()
+    visible = _activeWorkbench()
 
-    global toolbar
+    global PartToolbar
 
     window : QMainWindow = Gui.getMainWindow()
 
     if not window:
         return
 
-    if not toolbar:
+    if not PartToolbar:
 
-        toolbar = QToolBar(title)
-        toolbar.setToolTip(tooltip)
-        toolbar.setObjectName('Ratchet-Toolbar')
+        PartToolbar = QToolBar(title)
+        PartToolbar.setToolTip(tooltip)
+        PartToolbar.setObjectName('Ratchet-Toolbar')
 
-        registerCommands(toolbar)
+        registerFuseCommands(PartToolbar)
 
-        toolbar.setEnabled(False)
-        window.addToolBar(toolbar)
+        PartToolbar.setEnabled(False)
+        window.addToolBar(PartToolbar)
 
-    toolbar.setVisible(visible)
+    PartToolbar.setVisible(visible in ('PartWorkbench') if visible else False)
 
 
-def isPartActive ():
+def insertPartDesignToolbar ():
+
+    visible = _activeWorkbench()
+
+    global PartDesignToolbar
+
+    window : QMainWindow = Gui.getMainWindow()
+
+    if not window:
+        return
+
+    if not PartDesignToolbar:
+
+        PartDesignToolbar = QToolBar(title)
+        PartDesignToolbar.setToolTip(tooltip)
+        PartDesignToolbar.setObjectName('Ratchet-Toolbar')
+
+        registerFuseCommands(PartDesignToolbar)
+        registerCutCommands(PartDesignToolbar)
+
+        PartDesignToolbar.setEnabled(False)
+        window.addToolBar(PartDesignToolbar)
+
+    PartDesignToolbar.setVisible(visible in ('PartDesignWorkbench') if visible else False)
+
+def _activeWorkbench ():
 
     global timer
 
@@ -60,17 +85,17 @@ def isPartActive ():
         timer.start(100)
         return False
 
-    name = workbench.name()
-
-    return name in ('PartWorkbench', 'PartDesignWorkbench')
+    return workbench.name()
 
 
-timer.timeout.connect(insertToolbar)
+timer.timeout.connect(insertPartToolbar)
+timer.timeout.connect(insertPartDesignToolbar)
 
 
 
 window = Gui.getMainWindow()
-window.workbenchActivated.connect(insertToolbar)
+window.workbenchActivated.connect(insertPartToolbar)
+window.workbenchActivated.connect(insertPartDesignToolbar)
 
 
 from FreeCAD import activeDocument
@@ -78,14 +103,16 @@ from FreeCAD import activeDocument
 
 def update ():
 
-    global toolbar
+    global PartToolbar
+    global PartDesignToolbar
 
-    if not toolbar:
+    if not PartToolbar:
         return
 
     enabled = not not activeDocument()
 
-    toolbar.setEnabled(enabled)
+    PartToolbar.setEnabled(enabled)
+    PartDesignToolbar.setEnabled(enabled)
 
 
 observer = DocumentSwitch(update)

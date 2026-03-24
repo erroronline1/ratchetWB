@@ -13,9 +13,11 @@ class AttachExtensionPython ( DocumentObject , ABC ):
 
 class BaseRatchet ():
 
+    boolean = "fuse"
     type : str
 
-    def __init__ ( self , _object ):
+    def __init__ ( self , _object, boolean: str = "fuse" ):
+        self.boolean = boolean
         pass
 
     def execute ( self , object : AttachExtensionPython ):
@@ -35,7 +37,11 @@ class BaseRatchet ():
 
             shape.Placement = object.Placement
 
-            shape = object.BaseFeature.Shape.fuse(shape)
+            if self.boolean == 'cut':
+                shape = object.BaseFeature.Shape.cut(shape)
+            else:
+                shape = object.BaseFeature.Shape.fuse(shape)
+
             shape.transformShape(object.Placement.inverse().toMatrix(),True) # account for setting fp.Shape below moves the shape to fp.Placement, ignoring its previous placement
 
 

@@ -39,4 +39,6 @@
 
 -   Integration into PartDesign workbench
 
+-   Subtractive shapes in PartDesign
+
 <br/>

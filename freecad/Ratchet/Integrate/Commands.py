@@ -9,7 +9,7 @@ from FreeCAD import Qt
 
 translate = Qt.translate
 
-def registerCommands (
+def registerFuseCommands (
     toolbar : QToolBar
 ):
 
@@ -17,12 +17,34 @@ def registerCommands (
         toolbar = toolbar ,
         shape = Symmetric ,
         key = 'Symmetric',
-        name = translate('Command','Symmetric ratchet')
+        name = translate('Command','Symmetric ratchet'),
+        boolean = 'fuse'
     )
 
     Command(
         toolbar = toolbar ,
         shape = Directed ,
         key = 'Directed',
-        name = translate('Command','Directed ratchet')
+        name = translate('Command','Directed ratchet'),
+        boolean = 'fuse'
+    )
+
+def registerCutCommands (
+    toolbar : QToolBar
+):
+
+    Command(
+        toolbar = toolbar ,
+        shape = Symmetric ,
+        key = 'SymmetricCut',
+        name = translate('Command','Symmetric ratchet cut'),
+        boolean = 'cut'
+    )
+
+    Command(
+        toolbar = toolbar ,
+        shape = Directed ,
+        key = 'DirectedCut',
+        name = translate('Command','Directed ratchet cut'),
+        boolean = 'cut'
     )
