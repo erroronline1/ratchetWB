@@ -71,9 +71,9 @@ update_locale() {
 	[ ! -f "${WB}${u}${locale}.ts" ] && action="Creating" || action="Updating"
 	echo -e "\033[1;34m\n\t<<< ${action} '${WB}${u}${locale}.ts' file >>>\n\033[m"
 	if [ "$u" == "" ]; then
-		$LUPDATE ../../Integrate/*.py ../../Shapes/Directed/*.py ../../Shapes/Symmetric/*.py -ts "${WB}.ts" # locale-agnostic file
+		$LUPDATE ../../Integrate/*.py ../../Shapes/Directed/*.py ../../Shapes/Symmetric/*.py ../../Panels/*.py -ts "${WB}.ts" # locale-agnostic file
 	else
-		$LUPDATE ../../Integrate/*.py ../../Shapes/Directed/*.py ../../Shapes/Symmetric/*.py -source-language en_US -target-language "${locale//-/_}" -ts "${WB}_${locale}.ts"
+		$LUPDATE ../../Integrate/*.py ../../Shapes/Directed/*.py ../../Shapes/Symmetric/*.py ../../Panels/*.py -source-language en_US -target-language "${locale//-/_}" -ts "${WB}_${locale}.ts"
 	fi
 }
 
