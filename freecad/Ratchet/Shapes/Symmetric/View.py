@@ -2,6 +2,7 @@
 # SPDX-FileNotice: Part of the Ratchet addon.
 
 from ...Misc import asIcon
+from ...Panels.TaskPanel import TaskPanel
 
 from FreeCAD import Gui
 
@@ -18,7 +19,8 @@ class ViewProxy:
         view.Proxy = self
 
     def attach ( self , view : ViewProvider ):
-        pass
+        self.ViewObject = view
+        self.Object = view.Object
 
     def updateData ( self , fp , prop ):
         pass
@@ -34,3 +36,16 @@ class ViewProxy:
 
     def dumps ( self ):
         return None
+
+    def setEdit(self, object, mode=0):
+        obj = object.Object
+        ui = TaskPanel(obj)
+        Gui.Control.showDialog(ui)
+        return True
+
+    def unsetEdit(self, object, mode):
+        Gui.Control.closeDialog()
+        return
+
+    def doubleClicked(self,object):
+        self.setEdit(object)

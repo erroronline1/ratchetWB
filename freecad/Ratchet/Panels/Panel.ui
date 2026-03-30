@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+    <class>AutoFillet</class>
+    <widget class="QDialog" name="Dialog">
+        <property name="geometry">
+            <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>400</width>
+                <height>101</height>
+            </rect>
+        </property>
+        <property name="windowTitle">
+            <string>Ratchet settings</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout">
+            <item row="0" column="0">
+                <layout class="QHBoxLayout" name="horizontalLayout_2">
+                    <item>
+                        <widget class="QLabel" name="RadiusLabel">
+                            <property name="text">
+                                <string>Radius</string>
+                            </property>
+                        </widget>
+                    </item>
+                    <item>
+                        <widget class="Gui::QuantitySpinBox" name="Radius" native="true">
+                            <property name="unit" stdset="0">
+                                <string notr="true">mm</string>
+                            </property>
+                            <property name="minimum" stdset="0">
+                                <double>0.000000000000000</double>
+                            </property>
+                            <property name="toolTip">
+                                <string>The radius of the ratchet.</string>
+                            </property>
+                        </widget>
+                    </item>
+                </layout>
+            </item>
+            <item row="1" column="0">
+                <layout class="QHBoxLayout" name="horizontalLayout_2">
+                    <item>
+                        <widget class="QLabel" name="HeightLabel">
+                            <property name="text">
+                                <string>Height</string>
+                            </property>
+                        </widget>
+                    </item>
+                    <item>
+                        <widget class="Gui::QuantitySpinBox" name="Height" native="true">
+                            <property name="unit" stdset="0">
+                                <string notr="true">mm</string>
+                            </property>
+                            <property name="minimum" stdset="0">
+                                <double>0.000000000000000</double>
+                            </property>
+                            <property name="toolTip">
+                                <string>The thickness / padding of the ratchet.</string>
+                            </property>
+                        </widget>
+                    </item>
+                </layout>
+            </item>
+            <item row="2" column="0">
+                <layout class="QHBoxLayout" name="horizontalLayout_2">
+                    <item>
+                        <widget class="QLabel" name="CountLabel">
+                            <property name="text">
+                                <string>Count</string>
+                            </property>
+                        </widget>
+                    </item>
+                    <item>
+                        <widget class="Gui::QuantitySpinBox" name="Count" native="true">
+                            <property name="minimum" stdset="2">
+                                <number>2</number>
+                            </property>
+                            <property name="toolTip">
+                                <string>The thickness / padding of the ratchet.</string>
+                            </property>
+                        </widget>
+                    </item>
+                </layout>
+            </item>
+            <item row="3" column="0">
+                <layout class="QHBoxLayout" name="horizontalLayout_2">
+                    <item>
+                        <widget class="QLabel" name="DepthLabel">
+                            <property name="text">
+                                <string>Depth</string>
+                            </property>
+                        </widget>
+                    </item>
+                    <item>
+                        <widget class="Gui::QuantitySpinBox" name="Depth" native="true">
+                            <property name="unit" stdset="0">
+                                <string notr="true">mm</string>
+                            </property>
+                            <property name="minimum" stdset="0">
+                                <double>0.000000000000000</double>
+                            </property>
+                            <property name="toolTip">
+                                <string>Depth of the teeth.</string>
+                            </property>
+                        </widget>
+                    </item>
+                </layout>
+            </item>
+            <item row="4" column="0">
+                <layout class="QHBoxLayout" name="horizontalLayout_2">
+                    <item>
+                        <widget class="QLabel" name="CurveLabel">
+                            <property name="text">
+                                <string>Curve</string>
+                            </property>
+                        </widget>
+                    </item>
+                    <item>
+                        <widget class="Gui::QuantitySpinBox" name="Curve" native="true">
+                            <property name="unit" stdset="0">
+                                <string notr="true">mm</string>
+                            </property>
+                            <property name="minimum" stdset="0">
+                                <double>0.000000000000000</double>
+                            </property>
+                            <property name="maximum" stdset="0">
+                                <double>1.000000000000000</double>
+                            </property>
+                            <property name="toolTip">
+                                <string>Curve factor of directed teeth</string>
+                            </property>
+                        </widget>
+                    </item>
+                </layout>
+            </item>
+        </layout>
+    </widget>
+    <resources />
+    <connections />
+</ui>

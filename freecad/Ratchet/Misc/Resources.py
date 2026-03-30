@@ -6,13 +6,14 @@ from importlib.resources import as_file , files
 
 
 resources = files(module) / 'Resources'
+panels = files(module) / 'Panels'
 
 locales = resources / 'Locales'
 icons = resources / 'Icons'
 
-
 Paths = {
-    'Locales' : locales
+    'Locales' : locales,
+    'Panels' : panels
 }
 
 

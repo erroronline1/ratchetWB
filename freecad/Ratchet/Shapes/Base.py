@@ -75,7 +75,3 @@ class BaseRatchet ():
 
         setattr(object,'Version',Version)
         setattr(object,'Type',self.type)
-
-
-
-

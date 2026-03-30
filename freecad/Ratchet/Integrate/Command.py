@@ -4,7 +4,8 @@
 from ..PySide.QtWidgets import QToolBar
 from ..PySide.QtCore import SIGNAL
 from ..PySide.QtGui import QAction , QIcon
-from ..Misc import asIcon
+from ..Misc import Paths, asIcon
+from ..Panels.TaskPanel import TaskPanel
 
 from ..Shapes.Directed.View import ViewProvider
 
@@ -98,6 +99,9 @@ class Command:
             self.shape(object)
 
         ########################################################################
+
+        dialog = TaskPanel(object)
+        Gui.Control.showDialog(dialog)
 
         document.commitTransaction()
         document.recompute()
