@@ -27,12 +27,6 @@
 
 <br/>
 
-[0.1.0]: https://github.com/erroronline1/ratchetWB/releases/tag/v0.1.0
-[0.2.0]: https://github.com/erroronline1/ratchetWB/releases/tag/v0.2.0
-
-
-<br/>
-
 ## [0.2.1] - 2026-03-24
 
 ### Added
@@ -42,3 +36,15 @@
 -   Subtractive shapes in PartDesign
 
 <br/>
+
+## [0.2.2] - 2026-03-30
+
+### Added
+
+-   Task panel
+
+<br/>
+
+[0.1.0]: https://github.com/erroronline1/ratchetWB/releases/tag/v0.1.0
+[0.2.0]: https://github.com/erroronline1/ratchetWB/releases/tag/v0.2.0
+[0.2.2]: https://github.com/erroronline1/ratchetWB/releases/tag/v0.2.2
