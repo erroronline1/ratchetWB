@@ -6,29 +6,34 @@
     <message>
         <location filename="../../Shapes/Directed/Properties.py" line="31"/>
         <location filename="../../Shapes/Symmetric/Properties.py" line="31"/>
+        <location filename="../../Panels/TaskPanel.py" line="18"/>
         <source>Radius</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Shapes/Directed/Properties.py" line="38"/>
         <location filename="../../Shapes/Symmetric/Properties.py" line="38"/>
+        <location filename="../../Panels/TaskPanel.py" line="19"/>
         <source>Height</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Shapes/Directed/Properties.py" line="47"/>
         <location filename="../../Shapes/Symmetric/Properties.py" line="47"/>
+        <location filename="../../Panels/TaskPanel.py" line="20"/>
         <source>Count</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Shapes/Directed/Properties.py" line="54"/>
         <location filename="../../Shapes/Symmetric/Properties.py" line="54"/>
+        <location filename="../../Panels/TaskPanel.py" line="21"/>
         <source>Depth</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Shapes/Directed/Properties.py" line="61"/>
+        <location filename="../../Panels/TaskPanel.py" line="22"/>
         <source>Curve</source>
         <translation type="unfinished"></translation>
     </message>
@@ -59,8 +64,16 @@
 <context>
     <name>Command.Tooltip</name>
     <message>
-        <location filename="../../Integrate/Command.py" line="39"/>
+        <location filename="../../Integrate/Command.py" line="40"/>
         <source>Generate a {{ Name }}</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>TaskPanel</name>
+    <message>
+        <location filename="../../Panels/TaskPanel.py" line="17"/>
+        <source>Ratchet Settings</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

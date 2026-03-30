@@ -6,29 +6,34 @@
     <message>
         <location filename="../../Shapes/Directed/Properties.py" line="31"/>
         <location filename="../../Shapes/Symmetric/Properties.py" line="31"/>
+        <location filename="../../Panels/TaskPanel.py" line="18"/>
         <source>Radius</source>
         <translation>Radius</translation>
     </message>
     <message>
         <location filename="../../Shapes/Directed/Properties.py" line="38"/>
         <location filename="../../Shapes/Symmetric/Properties.py" line="38"/>
+        <location filename="../../Panels/TaskPanel.py" line="19"/>
         <source>Height</source>
         <translation>Höhe</translation>
     </message>
     <message>
         <location filename="../../Shapes/Directed/Properties.py" line="47"/>
         <location filename="../../Shapes/Symmetric/Properties.py" line="47"/>
+        <location filename="../../Panels/TaskPanel.py" line="20"/>
         <source>Count</source>
         <translation>Anzahl</translation>
     </message>
     <message>
         <location filename="../../Shapes/Directed/Properties.py" line="54"/>
         <location filename="../../Shapes/Symmetric/Properties.py" line="54"/>
+        <location filename="../../Panels/TaskPanel.py" line="21"/>
         <source>Depth</source>
         <translation>Tiefe</translation>
     </message>
     <message>
         <location filename="../../Shapes/Directed/Properties.py" line="61"/>
+        <location filename="../../Panels/TaskPanel.py" line="22"/>
         <source>Curve</source>
         <translation>Krümmung</translation>
     </message>
@@ -59,16 +64,17 @@
 <context>
     <name>Command.Tooltip</name>
     <message>
-        <location filename="../../Integrate/Command.py" line="39"/>
+        <location filename="../../Integrate/Command.py" line="40"/>
         <source>Generate a {{ Name }}</source>
         <translation>Erzeuge ein {{Name}}</translation>
     </message>
 </context>
 <context>
-    <name>DirectedTeeth</name>
+    <name>TaskPanel</name>
     <message>
-        <source>is not a valid number of teeth. Please use 2+ teeth.</source>
-        <translation type="vanished"> ist keine gültige Anzahl and Zähnen. Nutze 2 oder mehr.</translation>
+        <location filename="../../Panels/TaskPanel.py" line="17"/>
+        <source>Ratchet Settings</source>
+        <translation>Einstellungen</translation>
     </message>
 </context>
 <context>
