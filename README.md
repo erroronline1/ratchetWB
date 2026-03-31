@@ -17,12 +17,14 @@ FreeCAD addon for ratchet creation.
 
 ## Usage
 
-The functions are available through the Part-workbench.
+The functions are available through the Part- and PartDesign-workbench.
 
-Add one of the desired geometries either as a part or as part of an active body. Change values regarding e.g. size and number of teeth within the models property settings. Possibly edit the Curve-property for inset directed ratchets.
+Add one of the desired geometries either as a part or as part of an active body. Change values regarding e.g. size and number of teeth within the models property settings or the task panel by double clicking on the geometry within the tree. Possibly edit the Curve-property for inset directed ratchets.
 
 There is not a complete failsafe mechanism to avoid all possible meaningless values!  
-Subtractive directed ratchets in PartDesign may not render correct. I can only assume it has something to do with the curvatures. You can however select the contained shape and create a pocket with it.
+Subtractive directed ratchets in PartDesign may not render correct, if faces intersect. I can only assume it has something to do with the curvatures. You can however
+* either select the contained shape and create a pocket with it
+* or make it slightly bigger than the parent geometry and cut through all of it
 
 <br/>
 
