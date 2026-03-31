@@ -6,36 +6,41 @@
     <message>
         <location filename="../../Shapes/Directed/Properties.py" line="31"/>
         <location filename="../../Shapes/Symmetric/Properties.py" line="31"/>
-        <location filename="../../Panels/TaskPanel.py" line="18"/>
+        <location filename="../../Panels/TaskPanel.py" line="27"/>
         <source>Radius</source>
         <translation>Radius</translation>
     </message>
     <message>
         <location filename="../../Shapes/Directed/Properties.py" line="38"/>
         <location filename="../../Shapes/Symmetric/Properties.py" line="38"/>
-        <location filename="../../Panels/TaskPanel.py" line="19"/>
+        <location filename="../../Panels/TaskPanel.py" line="28"/>
         <source>Height</source>
         <translation>Höhe</translation>
     </message>
     <message>
         <location filename="../../Shapes/Directed/Properties.py" line="47"/>
         <location filename="../../Shapes/Symmetric/Properties.py" line="47"/>
-        <location filename="../../Panels/TaskPanel.py" line="20"/>
+        <location filename="../../Panels/TaskPanel.py" line="29"/>
         <source>Count</source>
         <translation>Anzahl</translation>
     </message>
     <message>
         <location filename="../../Shapes/Directed/Properties.py" line="54"/>
         <location filename="../../Shapes/Symmetric/Properties.py" line="54"/>
-        <location filename="../../Panels/TaskPanel.py" line="21"/>
+        <location filename="../../Panels/TaskPanel.py" line="30"/>
         <source>Depth</source>
         <translation>Tiefe</translation>
     </message>
     <message>
         <location filename="../../Shapes/Directed/Properties.py" line="61"/>
-        <location filename="../../Panels/TaskPanel.py" line="22"/>
+        <location filename="../../Panels/TaskPanel.py" line="31"/>
         <source>Curve</source>
         <translation>Krümmung</translation>
+    </message>
+    <message>
+        <location filename="../../Panels/TaskPanel.py" line="32"/>
+        <source>Preview</source>
+        <translation>Vorschau</translation>
     </message>
 </context>
 <context>
@@ -72,7 +77,7 @@
 <context>
     <name>TaskPanel</name>
     <message>
-        <location filename="../../Panels/TaskPanel.py" line="17"/>
+        <location filename="../../Panels/TaskPanel.py" line="26"/>
         <source>Ratchet Settings</source>
         <translation>Einstellungen</translation>
     </message>
