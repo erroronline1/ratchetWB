@@ -134,6 +134,20 @@
                     </item>
                 </layout>
             </item>
+            <item row="5" column="0">
+                <layout class="QHBoxLayout" name="horizontalLayout_2">
+                    <item>
+                        <widget class="QCheckBox" name="Preview">
+                            <property name="text">
+                                <string>Preview</string>
+                            </property>
+                            <property name="checked" stdset="0">
+                                <bool>true</bool>
+                            </property>
+                        </widget>
+                    </item>
+                </layout>
+            </item>
         </layout>
     </widget>
     <resources />
