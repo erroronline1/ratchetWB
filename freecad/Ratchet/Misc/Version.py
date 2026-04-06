@@ -2,4 +2,4 @@
 # SPDX-FileNotice: Part of the Ratchet addon.
 
 
-Version = '0.2.1'
+Version = '1.0.0'
