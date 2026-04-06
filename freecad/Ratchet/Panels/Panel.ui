@@ -135,6 +135,17 @@
                 </layout>
             </item>
             <item row="5" column="0">
+                <layout class="QHBoxLayout" name="horizontalLayout_1">
+                    <item>
+                        <widget class="QLabel" name="CurveHint">
+                            <property name="text">
+                                <string>0.34 would be approximately straight</string>
+                            </property>
+                        </widget>
+                    </item>
+                </layout>
+            </item>
+            <item row="6" column="0">
                 <layout class="QHBoxLayout" name="horizontalLayout_2">
                     <item>
                         <widget class="QCheckBox" name="Preview">

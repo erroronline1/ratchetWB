@@ -37,11 +37,6 @@
         <source>Curve</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <location filename="../../Panels/TaskPanel.py" line="32"/>
-        <source>Preview</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>Command</name>
@@ -79,6 +74,16 @@
     <message>
         <location filename="../../Panels/TaskPanel.py" line="26"/>
         <source>Ratchet Settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../Panels/TaskPanel.py" line="32"/>
+        <source>0.34 would be approximately straight</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../Panels/TaskPanel.py" line="33"/>
+        <source>Preview</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
