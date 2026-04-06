@@ -29,6 +29,8 @@ class ViewProxy:
         pass
 
     def getIcon ( self ):
+        if self.Object.Proxy.boolean == 'cut':
+            return asIcon(f'Shapes/SymmetricCut')
         return asIcon(f'Shapes/Symmetric')
 
     def loads ( self , state ):
