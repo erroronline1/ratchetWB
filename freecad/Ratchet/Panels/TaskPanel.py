@@ -29,7 +29,8 @@ class TaskPanel:
         self.form.CountLabel.setProperty("text", translate('App::Property','Count'))
         self.form.DepthLabel.setProperty("text", translate('App::Property','Depth'))
         self.form.CurveLabel.setProperty("text", translate('App::Property','Curve'))
-        self.form.Preview.setProperty("text", translate('App::Property','Preview'))
+        self.form.CurveHint.setProperty("text", translate('TaskPanel','0.34 would be approximately straight'))
+        self.form.Preview.setProperty("text", translate('TaskPanel','Preview'))
 
         # value filling
         self.form.Radius.setProperty("rawValue", self.object.Radius.Value)
@@ -49,8 +50,11 @@ class TaskPanel:
         self.form.Curve.valueChanged.connect(self.set)
         self.form.Preview.clicked.connect(self.set)
 
+        self.object.ViewObject.Transparency = 50
+
     def accept(self):
         self.set()
+        self.object.ViewObject.Transparency = 0
 
         self.object.touch()
         activeDocument().recompute()
@@ -64,6 +68,7 @@ class TaskPanel:
         self.object.Depth.Value = self.initial.get("Depth")
         if hasattr(self.object, 'Curve'):
             self.object.Curve = self.initial.get("Curve")
+        self.object.ViewObject.Transparency = 0
 
         self.object.touch()
         activeDocument().recompute()
